@@ -4,13 +4,12 @@ HOST=
 USER=
 PASSWORD=
 SSHP=`which sshpass`
-if [ -z "$HOST" ] && [ -z "$USER" ] && [ -z "$PASSWORD" ]; then
-    read -p 'Host: ' HOST
-    read -p 'User: ' USER
-    read -sp 'Password: ' PASSWORD
-    echo "connecting..."
+if [ ${SSHP}="/usr/bin/sshpass" ]; then
+    if [ -z "$HOST" ]; then read -p 'Host: ' HOST; fi
+    if [ -z "$USER" ]; then read -p 'User: ' USER; fi
+    if [ -z "$PASSWORD" ]; then read -sp 'Password: ' PASSWORD; fi
+    printf "\nconnecting...\n"
     ${SSHP} -p $PASSWORD ssh -o StrictHostKeyChecking=no $USER@$HOST
 else
-    echo "connecting..."
-    ${SSHP} -p $PASSWORD ssh -o StrictHostKeyChecking=no $USER@$HOST
+    printf "sshpass not installed!"
 fi
