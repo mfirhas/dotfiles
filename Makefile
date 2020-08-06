@@ -5,7 +5,7 @@ out=main
 all: test build start
 
 test:
-	@go test ./... -v -race
+	@go test -v -race ./...
 
 compile:
 	@go build -v ./...
