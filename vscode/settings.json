@@ -1,41 +1,19 @@
 {
-    "terminal.integrated.cursorStyle": "line",
-    "editor.cursorStyle": "line-thin",
-    "window.zoomLevel": 0,
-    "editor.fontFamily": "Hack",
-    "editor.fontSize": 14,
-    "editor.smoothScrolling": true,
-    "material-icon-theme.hidesExplorerArrows": true,
-    "material-icon-theme.folders.color": "#42a5f5",
-    "workbench.colorTheme": "Delphi",
-    "[go]": {
-        "editor.insertSpaces": false,
-        "editor.formatOnSave": true
-    },
-    "terminal.integrated.rendererType": "canvas",
-    "git.enableSmartCommit": true,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
     "workbench.startupEditor": "newUntitledFile",
-    "terminal.integrated.shell.linux": "/usr/bin/zsh",
-    "terminal.integrated.fontFamily": "HACK NERD FONT",
-    "terminal.integrated.fontSize": 14.5,
-    "workbench.colorCustomizations": {
-        // "terminal.foreground": "#c7c7c7",
-        // "terminal.background": "#404040"
-    },
-    "zenMode.centerLayout": false,
-    "breadcrumbs.enabled": false,
-    "github.hosts": [
-        {
-            "host": "https://github.com",
-            "username": "oauth",
-            "token": "system"
-        }
-    ],
-    "files.associations": {
-        "*.tt2": "html"
-    },
-    "workbench.iconTheme": "material-icon-theme"
+    "editor.fontFamily": "Hack",
+    "workbench.colorTheme": "GitHub Sharp",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.color": "#42a5f5",
+    "terminal.integrated.cursorStyle": "line",
+    "editor.cursorWidth": 1,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "git.enableSmartCommit": true,
+    "window.zoomLevel": 0,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "java.project.importHint": false,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "material-icon-theme.hidesExplorerArrows": true
 }
