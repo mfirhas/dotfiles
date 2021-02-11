@@ -62,4 +62,7 @@ services:
             - 5672:5672
             - 15672:15672
 
-
+    consul:
+        image: consul
+        ports:
+            - "8500:8500"
