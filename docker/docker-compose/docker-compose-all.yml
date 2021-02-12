@@ -6,6 +6,12 @@ services:
         ports:
             - 6379:6379
 
+    redis-cli:
+        image: redis:latest
+        links:
+            - redis
+        command: redis-cli -h redis
+
     # kafka
     # https://medium.com/better-programming/your-local-event-driven-environment-using-dockerised-kafka-cluster-6e84af09cd95
     zookeeper:

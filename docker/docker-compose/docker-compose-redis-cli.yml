@@ -1,0 +1,8 @@
+version: '3.1'
+
+services:
+    rcli:
+        image: redis:latest
+        links:
+          - redis
+        command: redis-cli -h redis
