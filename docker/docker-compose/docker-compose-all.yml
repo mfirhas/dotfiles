@@ -72,3 +72,16 @@ services:
         image: consul
         ports:
             - "8500:8500"
+    
+    mongodb:
+        image: mongo:latest
+        container_name: mongodb
+        environment: 
+            - MONGO_INITDB_ROOT_USERNAME=root
+            - MONGO_INITDB_ROOT_PASSWORD=root
+            - MONGO_INITDB_DATABASE=local
+        volumes: 
+            - /data/db
+        ports: 
+            - "27017:27017"
+
