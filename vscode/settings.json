@@ -15,5 +15,6 @@
     "java.project.importHint": false,
     "git.autofetch": true,
     "git.confirmSync": false,
-    "material-icon-theme.hidesExplorerArrows": true
+    "material-icon-theme.hidesExplorerArrows": true,
+    "go.toolsManagement.autoUpdate": true
 }
