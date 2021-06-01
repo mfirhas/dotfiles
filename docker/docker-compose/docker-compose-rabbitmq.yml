@@ -9,9 +9,9 @@ services:
             - /Users/mfathirirhas/.docker/rabbitmq/logs/:/var/log/rabbitmq/
             - /Users/mfathirirhas/.docker/rabbitmq/enabled_plugins:/etc/rabbitmq/enabled_plugins
         environment:
-            RABBITMQ_ERLANG_COOKIE: cluster_cookie
-            RABBITMQ_DEFAULT_USER: guest
-            RABBITMQ_DEFAULT_PASS: guest
+            - RABBITMQ_ERLANG_COOKIE=cluster_cookie
+            - RABBITMQ_DEFAULT_USER=guest
+            - RABBITMQ_DEFAULT_PASS=guest
         ports:
             - 5672:5672
             - 15672:15672
