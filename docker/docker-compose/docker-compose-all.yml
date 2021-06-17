@@ -3,17 +3,13 @@ version: '3.1'
 services:
     redis:
         image: redis:latest
+        container_name: redis
         # command: redis-server --requirepass password_here # for redis password
+        restart: always
         environment: 
             - ALLOW_EMPTY_PASSWORD=yes
         ports:
             - 6379:6379
-
-    redis-cli:
-        image: redis:latest
-        command: redis-cli -h redis
-        links:
-            - redis
 
     # kafka
     # https://medium.com/better-programming/your-local-event-driven-environment-using-dockerised-kafka-cluster-6e84af09cd95
@@ -26,6 +22,7 @@ services:
         environment:
             - ZOOKEEPER_CLIENT_PORT=2181
             - ZOOKEEPER_TICK_TIME=2000 
+
     broker:
         image: confluentinc/cp-server:5.4.0
         hostname: broker
@@ -48,12 +45,13 @@ services:
             - CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS=1
             - CONFLUENT_METRICS_ENABLE='true'
             - CONFLUENT_SUPPORT_CUSTOMER_ID='anonymous' 
+
     kafka-tools:
         image: confluentinc/cp-kafka:5.4.0
         hostname: kafka
         container_name: kafka
         command: ["tail", "-f", "/dev/null"]
-        network_mode: "host"
+        network_mode: host
     # kafka end
 
     rabbitmq:
@@ -73,6 +71,7 @@ services:
 
     consul:
         image: consul
+        container_name: consul
         ports:
             - 8500:8500
     
