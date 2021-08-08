@@ -1,0 +1,21 @@
+version: '3.1'
+
+services: 
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    command: '--default-authentication-plugin=mysql_native_password'
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+    volumes: 
+      - /Users/mfathirirhas/.docker/mysql:/var/lib/mysql
+    networks: 
+      - service
+
+networks:
+  service:
+    external: true
+    name: net

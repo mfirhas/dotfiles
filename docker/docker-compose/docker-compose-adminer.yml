@@ -1,0 +1,15 @@
+version: '3.1'
+
+services: 
+  adminer:
+    image: adminer
+    container_name: adminer
+    ports:
+      - 8282:8080
+    networks:
+      - service
+
+networks:
+  service:
+    external: true
+    name: net

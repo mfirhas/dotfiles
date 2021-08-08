@@ -1,0 +1,21 @@
+version: '3.1'
+
+services: 
+  postgres:
+    image: postgres:10-alpine
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    volumes:
+      - /Users/mfathirirhas/.docker/postgres:/var/lib/postgresql
+      - /Users/mfathirirhas/.docker/postgres/data:/var/lib/postgresql/data
+    networks: 
+      - service
+
+networks:
+  service:
+    external: true
+    name: net
