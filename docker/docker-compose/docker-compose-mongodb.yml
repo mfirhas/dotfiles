@@ -7,8 +7,13 @@ services:
         environment: 
             - MONGO_INITDB_ROOT_USERNAME=root
             - MONGO_INITDB_ROOT_PASSWORD=root
-            - MONGO_INITDB_DATABASE=local
+            - MONGO_INITDB_DATABASE=test
         volumes: 
-            - /data/db
+            - mongodb-data:/var/lib/mongodb
         ports: 
             - 27017:27017
+        expose: 
+            - 27017
+
+volumes: 
+    mongodb-data:
