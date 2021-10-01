@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  twemproxy:
+    image: tarantool/twemproxy:latest
+    container_name: twemproxy
+    # command: >
+    #   --conf-file=conf/nutcracker.yml
+    #   --output=logs/nutcracker.log
+    #   --verbose=5
+    ports:
+      - "22121:22121"
+    volumes:
+      - twemproxy:/opt/twemproxy
+    depends_on:
+      - redis
+    networks:
+      - service
+
+volumes: 
+    twemproxy:
+
+networks:
+  service:
+    external: true
+    name: net
