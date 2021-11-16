@@ -13,6 +13,17 @@ services:
 
     # kafka
     # https://medium.com/better-programming/your-local-event-driven-environment-using-dockerised-kafka-cluster-6e84af09cd95
+    # create new topics: get into kafka and run command:
+    # kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 2 --topic <topic_name>
+    # 
+    # list topics: get into kafka and run command:
+    # kafka-topics --list --bootstrap-server localhost:9092
+    # 
+    # describe topic:
+    # kafka-topics --describe --bootstrap-server localhost:9092 --topic <topic_name>
+    # 
+    # consuming topic:
+    # kafka-console-consumer --bootstrap-server localhost:9092 --from-beginning --topic <topic_name> --property "print.key=true"
     zookeeper:
         image: confluentinc/cp-zookeeper:5.4.0
         hostname: zookeeper
