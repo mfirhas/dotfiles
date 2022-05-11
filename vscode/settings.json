@@ -9,12 +9,19 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "git.enableSmartCommit": true,
-    "window.zoomLevel": 0,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "java.project.importHint": false,
     "git.autofetch": true,
     "git.confirmSync": false,
     "material-icon-theme.hidesExplorerArrows": true,
-    "go.toolsManagement.autoUpdate": true
+    "go.toolsManagement.autoUpdate": true,
+    "extensions.ignoreRecommendations": true,
+    "redhat.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "sync.gist": "53f2248cc5012764d77ecf486a309134",
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust"
+    },
+    "rust-client.rustupPath": "/Users/mfathirirhas/.cargo/bin/rustup"
 }
