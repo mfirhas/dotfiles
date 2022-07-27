@@ -1,0 +1,13 @@
+version: '3.1'
+
+services: 
+  adminer:
+    image: gusaul/grpcox:latest
+    container_name: grpcox
+    ports:
+      - 6969:6969
+    volumes:
+      - grpcox:/var/log
+
+volumes:
+  grpcox:
