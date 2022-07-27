@@ -1,8 +1,11 @@
 version: '3.1'
 
+# connect to postgresql client psql
+# docker run -it --rm --network net postgres psql -h postgres -U root
+# execute sql script: docker exec -u root postgres psql leads root -f /docker-entrypoint-initdb.d/leads-staging.sql
 services: 
   postgres:
-    image: postgres:10-alpine
+    image: postgres:latest
     container_name: postgres
     ports:
       - 5432:5432
@@ -12,10 +15,14 @@ services:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
     volumes:
-      - /Users/mfathirirhas/.docker/postgres:/var/lib/postgresql
-      - /Users/mfathirirhas/.docker/postgres/data:/var/lib/postgresql/data
-    networks: 
+      - postgres:/var/lib/postgresql
+      - postgres-data:/var/lib/postgresql/data
+    networks:
       - service
+
+volumes:
+  postgres:
+  postgres-data:
 
 networks:
   service:
