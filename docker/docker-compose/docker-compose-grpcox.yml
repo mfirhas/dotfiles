@@ -8,6 +8,13 @@ services:
       - 6969:6969
     volumes:
       - grpcox:/var/log
+    networks:
+      - net
 
 volumes:
   grpcox:
+
+networks:
+  net:
+    external: true
+    name: net

@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  kubemq:
+    image: kubemq/kubemq:latest
+    container_name: kubemq
+    ports:
+      - "8080:8080"
+      - "9090:9090"
+      - "50000:50000"
+    environment:
+      - KUBEMQ_HOST=kubemq
+      - KUBEMQ_TOKEN="Your KubeMQ Token Here"
+    networks:
+      - backend
+    volumes:
+      - kubemq_vol:/store
+networks:
+  backend:
+volumes:
+  kubemq_vol:
