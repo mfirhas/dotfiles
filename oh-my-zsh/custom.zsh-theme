@@ -1,10 +1,9 @@
 # CUSTOM THEME
 
-NEWLINE=$'\n$ '
+NEWLINE=$'\n%B%F{red}$ '
 PROMPT='%m %B%F{blue}:: %b%F{green}%3~ $(hg_prompt_info)$(git_prompt_info)%B%(!.%F{red}.%F{blue})»%f%b '
 PROMPT="$PROMPT$NEWLINE"
-# add separator line for every prompts
-PS1=$'${(r:$COLUMNS::_:)}'
+PS1=$'${(r:$COLUMNS::_:)}'$PS1
 RPS1='%(?..%F{red}%? ↵%f)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}‹"
