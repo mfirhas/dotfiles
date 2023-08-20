@@ -1,7 +1,7 @@
 # CUSTOM THEME
 ## based on afowler
 
-NEWLINE=$'\n%B%F{red}$%{$reset_color%} '
+NEWLINE=$'\n%B%F{green}$ '
 PROMPT='%n%B%F{red}@%{$reset_color%}%m %B%F{blue}:: %b%F{green}%3~ $(hg_prompt_info)$(git_prompt_info)%B%(!.%F{red}.%F{blue})»%f%b '
 PROMPT="$PROMPT$NEWLINE"
 PS1=$'${(r:$COLUMNS::_:)}'$PS1
