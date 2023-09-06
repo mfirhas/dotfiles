@@ -23,6 +23,12 @@ export JAVA_HOME=/usr/local/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home
 # java 17
 #export JAVA_HOME=/usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
 
+### ruby 3
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+### python 3
+export PATH="/usr/local/opt/python@3/bin:$PATH"
+
 ### git
 export PATH=/usr/local/Cellar/git/2.32.0/bin:$PATH
 export GITHUB_SSH_KEYS_ADD=$HOME/code/script/sshadd.sh
