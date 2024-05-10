@@ -26,3 +26,8 @@ cp /usr/local/share/ohmyzsh/themes/custom.zsh-theme $HOME/code/dotfiles/oh-my-zs
 
 # .zshrc
 cp $HOME/.zshrc $HOME/code/dotfiles/.zshrc
+
+# rust's cargo
+# NOTE: DO NOT copy all .cargo contents
+cp $HOME/.cargo/config.toml $HOME/code/dotfiles/.cargo/config.toml
+
