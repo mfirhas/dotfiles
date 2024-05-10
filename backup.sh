@@ -31,3 +31,6 @@ cp $HOME/.zshrc $HOME/code/dotfiles/.zshrc
 # NOTE: DO NOT copy all .cargo contents
 cp $HOME/.cargo/config.toml $HOME/code/dotfiles/.cargo/config.toml
 
+# tmux configs
+cp $HOME/.tmux.conf $HOME/code/dotfiles/.tmux.conf
+
