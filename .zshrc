@@ -1,3 +1,9 @@
+### zsh
+. "$HOME/.config/zsh/keybindings.conf"
+
+### oh-my-zsh
+. "$HOME/.config/oh-my-zsh/oh-my-zsh.conf"
+
 ### Rust
 export RUSTPATH=$HOME/code/rust
 
@@ -36,5 +42,4 @@ export GITHUB_SSH_KEYS_ADD=$HOME/code/script/sshadd.sh
 ### sonarqube
 export PATH=$PATH:/usr/local/Cellar/sonar-scanner/4.6.2.2472_1/bin
 
-### oh-my-zsh
-. "$HOME/.config/oh-my-zsh/oh-my-zsh_config"
+
