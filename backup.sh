@@ -25,6 +25,7 @@ cp /usr/local/share/ohmyzsh/themes/custom.zsh-theme $HOME/code/dotfiles/oh-my-zs
 cp $HOME/.vimrc $HOME/code/dotfiles/.vimrc
 
 # nvim configs
+# uninstall neovim and nvchad, move to helix
 #cp $HOME/.config/nvim/init.vim $HOME/code/dotfiles/.config/nvim/init.vim
 
 # cargo
