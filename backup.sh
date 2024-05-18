@@ -19,7 +19,7 @@ cp -rp $HOME/.config/oh-my-zsh/ $HOME/code/dotfiles/.config/oh-my-zsh/
 cp $HOME/.vimrc $HOME/code/dotfiles/.vimrc
 
 # nvim configs
-cp $HOME/.config/nvim/init.vim $HOME/code/dotfiles/.config/nvim/init.vim
+#cp $HOME/.config/nvim/init.vim $HOME/code/dotfiles/.config/nvim/init.vim
 
 # oh-my-zsh custom theme
 cp /usr/local/share/ohmyzsh/themes/custom.zsh-theme $HOME/code/dotfiles/oh-my-zsh/custom.zsh-theme
@@ -34,3 +34,4 @@ cp $HOME/.cargo/config.toml $HOME/code/dotfiles/.cargo/config.toml
 # tmux configs
 cp $HOME/.tmux.conf $HOME/code/dotfiles/.tmux.conf
 
+cp -rp $HOME/.config/wezterm/ $HOME/code/dotfiles/.config/wezterm

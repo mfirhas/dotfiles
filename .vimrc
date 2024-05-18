@@ -16,3 +16,5 @@ nnoremap ^ $
 set guicursor=n-v-c:thin
 
 let g:netrw_liststyle=3
+
+set hlsearch
