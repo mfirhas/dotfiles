@@ -35,4 +35,8 @@ cp $HOME/.cargo/config.toml $HOME/code/github.com/mfirhas/dotfiles/.cargo/config
 # tmux configs
 cp $HOME/.tmux.conf $HOME/code/github.com/mfirhas/dotfiles/.tmux.conf
 
+# wezterm
 cp -rp $HOME/.config/wezterm/ $HOME/code/github.com/mfirhas/dotfiles/.config/wezterm/
+
+# helix
+cp -rp $HOME/.config/helix $HOME/code/github.com/mfirhas/dotfiles/.config

@@ -1,0 +1,9 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "block"
+normal = "block"
+select = "block"
