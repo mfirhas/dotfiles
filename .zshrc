@@ -16,6 +16,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=/usr/local/Cellar/git/2.32.0/bin:$PATH
 export GITHUB_SSH_KEYS_ADD=$HOME/code/script/sshadd.sh
 export GITHUB=$HOME/code/github.com
+export GH=$GITHUB/mfirhas
 
 ### VS Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
