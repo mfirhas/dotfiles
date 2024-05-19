@@ -7,6 +7,7 @@ filetype indent on
 syntax on
 
 " line number
+set number
 set relativenumber
 
 " keys maps

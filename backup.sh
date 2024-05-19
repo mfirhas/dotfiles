@@ -39,4 +39,4 @@ cp $HOME/.tmux.conf $HOME/code/github.com/mfirhas/dotfiles/.tmux.conf
 cp -rp $HOME/.config/wezterm/ $HOME/code/github.com/mfirhas/dotfiles/.config/wezterm/
 
 # helix
-cp -rp $HOME/.config/helix $HOME/code/github.com/mfirhas/dotfiles/.config
+cp -rp $HOME/.config/helix/ $HOME/code/github.com/mfirhas/dotfiles/.config/helix/
