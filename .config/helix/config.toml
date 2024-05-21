@@ -11,3 +11,10 @@ select = "block"
 
 [editor.file-picker]
 hidden = false
+
+[keys.normal]
+"{" = ["goto_prev_paragraph", "collapse_selection"]
+"}" = ["goto_next_paragraph", "collapse_selection"]
+"H" = ["goto_window_top"]
+"M" = ["goto_window_center"]
+"L" = ["goto_window_bottom"]
