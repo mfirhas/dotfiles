@@ -1,0 +1,6 @@
+
+# load envs first
+. "$HOME/.config/fzf/fzf.env"
+. "$HOME/.config/fzf/key-bindings.zsh"
+
+

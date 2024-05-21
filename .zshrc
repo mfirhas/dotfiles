@@ -43,4 +43,5 @@ export PATH="/usr/local/opt/python@3/bin:$PATH"
 ### sonarqube
 export PATH=$PATH:/usr/local/Cellar/sonar-scanner/4.6.2.2472_1/bin
 
-
+### fzf
+. "$HOME/.config/fzf/fzfrc"
