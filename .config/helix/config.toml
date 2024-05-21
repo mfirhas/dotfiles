@@ -12,6 +12,12 @@ select = "block"
 [editor.file-picker]
 hidden = false
 
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "separator" , "version-control", "read-only-indicator", "file-modification-indicator"]
+center = []
+right = ["diagnostics", "total-line-numbers", "file-type", "file-line-ending", "selections", "register", "position", "file-encoding"]
+separator = " "
+
 [keys.normal]
 "{" = ["goto_prev_paragraph", "collapse_selection"]
 "}" = ["goto_next_paragraph", "collapse_selection"]
