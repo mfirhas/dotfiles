@@ -27,3 +27,10 @@ display-messages = true
 "H" = ["goto_window_top"]
 "M" = ["goto_window_center"]
 "L" = ["goto_window_bottom"]
+
+[keys.select]
+"{" = ["goto_prev_paragraph"]
+"}" = ["goto_next_paragraph"]
+"H" = ["goto_window_top"]
+"M" = ["goto_window_center"]
+"L" = ["goto_window_bottom"]
