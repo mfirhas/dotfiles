@@ -18,6 +18,9 @@ center = []
 right = ["diagnostics", "workspace-diagnostics", "total-line-numbers", "file-type", "file-line-ending", "selections", "register", "position", "file-encoding"]
 separator = " "
 
+[editor.lsp]
+display-messages = true
+
 [keys.normal]
 "{" = ["goto_prev_paragraph", "collapse_selection"]
 "}" = ["goto_next_paragraph", "collapse_selection"]
