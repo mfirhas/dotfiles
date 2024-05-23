@@ -6,7 +6,7 @@ NEWLINE=$'\n%F{green}$ %{$reset_color%}'
 PROMPT='%n%F{blue}::%{$reset_color%}%m%F{blue}::%F{blue}<%b%F{green}%3~%F{blue}>($(hg_prompt_info)$(git_prompt_info)%B%(!.%F{red}.%F{blue})%b%F{blue})'
 PROMPT="$PROMPT$NEWLINE"
 PS1=$'${(r:$COLUMNS::_:)}'$PS1
-RPS1='<%D{%H:%M:%S}>'
+RPS1='<%D{%f/%m/%y}>::<%F{green}%D{%H:%M:%S}%{$reset_color%}>'
 # RPS1='%(?..%F{red}%? ↵%f)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}"
