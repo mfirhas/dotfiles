@@ -1,0 +1,47 @@
+(
+    // selected top menus
+    selected_tab: Some("White"),
+    
+    // foreground color for bottom menus
+    command_fg: Some("Black"),
+
+    // background color for bottom menus
+    cmdbar_bg: Some("Green"),    
+
+    // options highlight for files changes
+    selection_bg: Some("Green"),
+
+    // options highlight for files changes
+    selection_fg: Some("Black"),
+
+    // extra bottom menus
+    cmdbar_extra_lines_bg: Some("Green"),
+
+    // inactive edges and menus
+    disabled_fg: Some("Green"),
+
+    // files and directories contents modifications
+    diff_line_add: Some("Green"),
+    diff_line_delete: Some("Red"),
+    diff_file_added: Some("Green"),
+    diff_file_removed: Some("LightRed"),
+    diff_file_moved: Some("Yellow"),
+    diff_file_modified: Some("LightYellow"),
+
+    
+    commit_hash: Some("Red"),
+    commit_time: Some("Green"),
+    commit_author: Some("Green"),
+
+    
+    danger_fg: Some("Red"),
+    
+    push_gauge_bg: Some("Green"),
+    push_gauge_fg: Some("Black"),
+    
+    tag_fg: Some("Green"),
+    branch_fg: Some("Black"),
+    line_break: Some("#"),
+    block_title_focused: Some("White"),
+)
+
