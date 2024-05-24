@@ -41,7 +41,7 @@
     
     tag_fg: Some("Green"),
     branch_fg: Some("Black"),
-    line_break: Some("#"),
+    line_break: Some("↵"),
     block_title_focused: Some("White"),
 )
 

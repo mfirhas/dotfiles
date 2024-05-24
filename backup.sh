@@ -40,3 +40,6 @@ cp -rp $HOME/.config/wezterm/ $HOME/code/github.com/mfirhas/dotfiles/.config/wez
 
 # helix
 cp -rp $HOME/.config/helix/ $HOME/code/github.com/mfirhas/dotfiles/.config/helix/
+
+# gitui
+cp -rp $HOME/.config/gitui/ $HOME/code/github.com/mfirhas/dotfiles/.config/gitui/

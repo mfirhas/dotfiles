@@ -20,6 +20,7 @@ separator = " "
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = true
 
 [keys.normal]
 "{" = ["goto_prev_paragraph", "collapse_selection"]
