@@ -45,3 +45,6 @@ export PATH=$PATH:/usr/local/Cellar/sonar-scanner/4.6.2.2472_1/bin
 
 ### fzf
 . "$HOME/.config/fzf/fzfrc"
+
+### aichat
+export AICHAT_CONFIG_DIR=$HOME/.config/aichat
