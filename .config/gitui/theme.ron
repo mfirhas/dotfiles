@@ -1,6 +1,6 @@
 (
     // selected top menus
-    selected_tab: Some("White"),
+    selected_tab: Some("Green"),
     
     // foreground color for bottom menus
     command_fg: Some("Black"),
@@ -18,7 +18,7 @@
     cmdbar_extra_lines_bg: Some("Green"),
 
     // inactive edges and menus
-    disabled_fg: Some("Green"),
+    disabled_fg: Some("White"),
 
     // files and directories contents modifications
     diff_line_add: Some("Green"),
@@ -40,8 +40,8 @@
     push_gauge_fg: Some("Black"),
     
     tag_fg: Some("Green"),
-    branch_fg: Some("Black"),
-    line_break: Some("↵"),
-    block_title_focused: Some("White"),
+    branch_fg: Some("Yellow"),
+    line_break: Some("⏎"),
+    block_title_focused: Some("Green"),
 )
 
