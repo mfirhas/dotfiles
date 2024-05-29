@@ -35,3 +35,6 @@ display-inlay-hints = true
 "H" = ["goto_window_top"]
 "M" = ["goto_window_center"]
 "L" = ["goto_window_bottom"]
+
+[keys.insert]
+"C-space" = "completion"
