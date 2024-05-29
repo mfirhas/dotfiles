@@ -6,6 +6,7 @@ local background_color = '1d2129'
 local foreground_color = 'ffffff'
 local selection_bg = 'c1ddff'
 local selection_fg = 'black'
+local act = wezterm.action
 
 local config = wezterm.config_builder()
 config.color_scheme = color_scheme
@@ -52,6 +53,7 @@ config.keys = {
     mods = 'CMD',
     action = wezterm.action.CloseCurrentPane { confirm = true },
   },
+  { key = '/', mods = 'CTRL', action = act.PaneSelect },
 }
 
 return config
