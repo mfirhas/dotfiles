@@ -48,3 +48,6 @@ export PATH=$PATH:/usr/local/Cellar/sonar-scanner/4.6.2.2472_1/bin
 
 ### aichat
 export AICHAT_CONFIG_DIR=$HOME/.config/aichat
+
+### homebrew
+export HOMEBREW_NO_AUTO_UPDATE=1
