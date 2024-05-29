@@ -36,4 +36,22 @@ config.window_padding = {
   bottom = 0,
 }
 
+config.keys = {
+  {
+    key = '\'',
+    mods = 'CTRL',
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
+  {
+    key = ']',
+    mods = 'CTRL',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  },
+  {
+    key = 'w',
+    mods = 'CMD',
+    action = wezterm.action.CloseCurrentPane { confirm = true },
+  },
+}
+
 return config
