@@ -28,6 +28,8 @@ display-inlay-hints = true
 "H" = ["goto_window_top"]
 "M" = ["goto_window_center"]
 "L" = ["goto_window_bottom"]
+"p" = ["paste_before"]
+"P" = ["paste_after"]
 
 [keys.select]
 "{" = ["goto_prev_paragraph"]
