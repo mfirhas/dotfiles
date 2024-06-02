@@ -17,6 +17,9 @@ left = ["mode", "spinner", "file-name", "separator" , "version-control", "read-o
 center = []
 right = ["diagnostics", "workspace-diagnostics", "total-line-numbers", "file-type", "file-line-ending", "selections", "register", "position", "file-encoding"]
 separator = " "
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 [editor.lsp]
 display-messages = true

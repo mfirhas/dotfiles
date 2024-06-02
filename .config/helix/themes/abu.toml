@@ -1,4 +1,12 @@
 inherits = "catppuccin_mocha"
 
+# blocked area by cursor
+"ui.selection" = { bg = "abu_selection_color" }
+# blocked area of current cursor in multiple selection
+"ui.selection.primary" = { bg = "abu_selection_primary_color" }
+
 [palette]
 base = "#1d2129"
+abu_selection_color = "#3d3f4e"
+abu_selection_primary_color = "#797b8c"
+
