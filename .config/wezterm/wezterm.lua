@@ -56,4 +56,9 @@ config.keys = {
   { key = '/', mods = 'CTRL', action = act.PaneSelect },
 }
 
+config.inactive_pane_hsb = {
+  saturation = 0.5,
+  brightness = 0.4,
+}
+
 return config
