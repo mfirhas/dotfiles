@@ -4,6 +4,8 @@ services:
   adminer:
     image: adminer
     container_name: adminer
+    environment:
+      ADMINER_DESIGN: flat
     ports:
       - 8282:8080
     networks:
