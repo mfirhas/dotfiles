@@ -1,0 +1,37 @@
+[user]
+	name = mfirhas
+	email = mfathirirhas@gmail.com
+
+[credential]
+	helper = cache
+	
+#[url "git@github.com:"]
+#	insteadOf = https://github.com/
+
+[init]
+	defaultBranch = main
+	
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+	required = true
+
+# git-delta
+# https://github.com/dandavison/delta
+# https://formulae.brew.sh/formula/git-delta
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+	side-by-side = true
+    
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
