@@ -43,3 +43,5 @@ cp -rp $HOME/.config/helix/ $HOME/code/github.com/mfirhas/dotfiles/.config/helix
 
 # gitui
 cp -rp $HOME/.config/gitui/ $HOME/code/github.com/mfirhas/dotfiles/.config/gitui/
+
+cp -rp $HOME/.config/broot/ $HOME/code/github.com/mfirhas/dotfiles/.config/broot/

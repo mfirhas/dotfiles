@@ -54,3 +54,5 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 ### llvm
 #export PATH=$(brew --prefix)/opt/llvm/bin:$PATH
+
+. "$HOME/.config/broot/brootrc"

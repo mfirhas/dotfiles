@@ -1,0 +1,3 @@
+export BROOT_EDITOR=/usr/local/bin/hx
+
+source /Users/mfirhas/.config/broot/launcher/bash/br
