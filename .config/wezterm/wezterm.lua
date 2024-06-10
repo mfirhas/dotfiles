@@ -54,6 +54,11 @@ config.keys = {
     action = wezterm.action.CloseCurrentPane { confirm = true },
   },
   { key = '/', mods = 'CTRL', action = act.PaneSelect },
+  {
+    key = '=',
+    mods = 'ALT',
+    action = wezterm.action.ToggleFullScreen,
+  },
 }
 
 config.inactive_pane_hsb = {
