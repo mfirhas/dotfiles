@@ -12,10 +12,11 @@ export PATH=$PATH:/usr/local/bin
 export GOPATH=$HOME/code/go
 export PATH=$PATH:$GOPATH/bin
 
-### git
-export GITHUB_SSH_KEYS_ADD=$HOME/code/script/sshadd.sh
+### paths
+export CONF=$HOME/.config
 export GITHUB=$HOME/code/github.com
 export GH=$GITHUB/mfirhas
+export GITHUB_SSH_KEYS_ADD=$HOME/code/script/sshadd.sh
 
 ### VS Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
