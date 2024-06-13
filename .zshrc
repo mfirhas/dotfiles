@@ -13,7 +13,6 @@ export GOPATH=$HOME/code/go
 export PATH=$PATH:$GOPATH/bin
 
 ### git
-export PATH=/usr/local/Cellar/git/2.32.0/bin:$PATH
 export GITHUB_SSH_KEYS_ADD=$HOME/code/script/sshadd.sh
 export GITHUB=$HOME/code/github.com
 export GH=$GITHUB/mfirhas
