@@ -24,10 +24,6 @@ cp /usr/local/share/ohmyzsh/themes/custom.zsh-theme $HOME/code/github.com/mfirha
 # vim configs
 cp $HOME/.vimrc $HOME/code/github.com/mfirhas/dotfiles/.vimrc
 
-# nvim configs
-# uninstall neovim and nvchad, move to helix
-#cp $HOME/.config/nvim/init.vim $HOME/code/github.com/mfirhas/dotfiles/.config/nvim/init.vim
-
 # cargo
 # NOTE: DO NOT copy all .cargo contents!!
 cp $HOME/.cargo/config.toml $HOME/code/github.com/mfirhas/dotfiles/.cargo/config.toml
@@ -45,3 +41,6 @@ cp -rp $HOME/.config/helix/ $HOME/code/github.com/mfirhas/dotfiles/.config/helix
 cp -rp $HOME/.config/gitui/ $HOME/code/github.com/mfirhas/dotfiles/.config/gitui/
 
 cp -rp $HOME/.config/broot/ $HOME/code/github.com/mfirhas/dotfiles/.config/broot/
+
+cp -rp $HOME/.config/nvim/ $HOME/code/github.com/mfirhas/dotfiles/.config/nvim/
+
