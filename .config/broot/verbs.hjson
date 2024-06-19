@@ -39,27 +39,18 @@ verbs: [
     {
         name: lazydocker
         invocation: lazydocker
-        external: "lazydocker -f {directory}"
+        external: "lazydocker -f {file}"
         leave_broot: false
     }
     
-    # Open in vim
+    # Open in nvim
     {
         name: nvim
         invocation: nvim
-        apply_to: text_file
         external: "nvim {file}"
         leave_broot: false
     }
 
-    # Open directory in nvim
-    {
-        name: nvim
-        invocation: nvim
-        apply_to: directory
-        external: "nvim {directory}"
-        leave_broot: false
-    }
     ### (END) Open in app
 
     # Launching `tail -n` on the selected file (leaving broot)
