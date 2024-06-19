@@ -22,7 +22,7 @@ verbs: [
     {
         name: vscode
         invocation: vscode
-        external: "code {directory}"
+        external: "code {file}"
         from_shell: true # use 'from_shell' if we run something from shell script, not binary/executable 
     }
     
