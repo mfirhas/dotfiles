@@ -7,15 +7,16 @@ verbs: [
         shortcut: e
         key: ctrl-e
         apply_to: text_file
-        external: "$BROOT_EDITOR {file}:{line}"
+        external: ["sh" "-e" "/Users/mfirhas/code/github.com/mfirhas/dotfiles/wezterm_open.sh" "hx" "{file}:{line}"]
         leave_broot: false
     }
    
     # Open directory in editor(helix)
     {
+        invocation: helix
+        shortcut: hx
         key: alt-e
-        apply_to: directory
-        external: "$BROOT_EDITOR {directory}"
+        external: ["sh" "-e" "/Users/mfirhas/code/github.com/mfirhas/dotfiles/wezterm_open.sh" "hx" "{file}"]
         leave_broot: false
     }
 
@@ -23,7 +24,7 @@ verbs: [
         name: vscode
         invocation: vscode
         external: "code {file}"
-        from_shell: true # use 'from_shell' if we run something from shell script, not binary/executable 
+        from_shell: true
     }
     
     # Open directory in gitui
@@ -31,7 +32,7 @@ verbs: [
         name: gitui
         invocation: gitui
         apply_to: directory
-        external: "gitui -d {directory}"
+        external: ["sh" "-e" "/Users/mfirhas/code/github.com/mfirhas/dotfiles/wezterm_open.sh" "gitui" "-d {directory}"]
         leave_broot: false
     }
 
@@ -39,7 +40,7 @@ verbs: [
     {
         name: lazydocker
         invocation: lazydocker
-        external: "lazydocker -f {file}"
+        external: ["sh" "-e" "/Users/mfirhas/code/github.com/mfirhas/dotfiles/wezterm_open.sh" "lazydocker" "-f {file}"]
         leave_broot: false
     }
     
@@ -47,11 +48,9 @@ verbs: [
     {
         name: nvim
         invocation: nvim
-        external: "nvim {file}"
+        external: ["sh" "-e" "/Users/mfirhas/code/github.com/mfirhas/dotfiles/wezterm_open.sh" "nvim" "{file}"]
         leave_broot: false
     }
-
-    ### (END) Open in app
 
     # Launching `tail -n` on the selected file (leaving broot)
     {
