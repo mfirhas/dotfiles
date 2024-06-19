@@ -19,6 +19,23 @@ get_last_slash_separated() {
     echo "$last_part"
 }
 
+get_pwd() {
+  # Get the current working directory
+  current_dir=$(pwd)
+
+  # Get the length of the current directory string
+  dir_length=${#current_dir}
+
+  # Check if the length of the directory is less than or equal to 13
+  if [ "$dir_length" -le 13 ]; then
+      # If the directory length is less than or equal to 13, print the whole directory
+      echo "$current_dir"
+  else
+      # Otherwise, extract and print the last 13 characters
+      echo "..${current_dir: -13}"
+  fi
+}
+
 get_tab_title() {
   if [[ $filepath == *" "* ]]; then
     local last_space_separated=$(get_last_space_separated "$filepath")
@@ -32,4 +49,4 @@ get_tab_title() {
 
 wezterm cli set-tab-title "$(get_tab_title)"
 $binary $filepath
-wezterm cli set-tab-title "$back_to_br"
+wezterm cli set-tab-title "$(get_pwd)"
