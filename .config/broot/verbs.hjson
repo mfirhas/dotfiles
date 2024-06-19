@@ -7,17 +7,15 @@ verbs: [
         shortcut: e
         key: ctrl-e
         apply_to: text_file
-        execution: "$BROOT_EDITOR {file}:{line}"
+        external: "$BROOT_EDITOR {file}:{line}"
         leave_broot: false
     }
-
-    ### Open in app
-    
+   
     # Open directory in editor(helix)
     {
         key: alt-e
         apply_to: directory
-        execution: "$BROOT_EDITOR {directory}"
+        external: "$BROOT_EDITOR {directory}"
         leave_broot: false
     }
 
