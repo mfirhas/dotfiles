@@ -26,6 +26,14 @@ verbs: [
         external: "code {file}"
         from_shell: true
     }
+
+    # broot somewhere else
+    {
+        name: broot
+        invocation: br {subpath}
+        external: "br {subpath}"
+        from_shell: true
+    }
     
     # Open directory in gitui
     {
