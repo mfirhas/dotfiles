@@ -34,10 +34,8 @@ brew "luajit"
 brew "luarocks"
 brew "maven"
 brew "mdbook"
-brew "mingw-w64"
 brew "mockery"
 brew "msgpack"
-brew "musl-cross"
 brew "neofetch"
 brew "neovim"
 brew "node"
@@ -62,10 +60,20 @@ brew "typescript"
 brew "vegeta"
 brew "wrk"
 brew "x86_64-linux-gnu-binutils"
-brew "x86_64-unknown-linux-gnu"
 brew "zellij"
 brew "sqlx-cli"
 brew "mdbook"
+
+# mac to linux gnu linker
+tap "sergiobenitez/osxct"
+brew "x86_64-unknown-linux-gnu"
+
+# mac to linux musl linker
+tap "filosottile/musl-cross"
+brew "musl-cross"
+
+# mac to windows mingw linker
+brew "mingw-w64"
 
 cask "dbeaver-community"
 cask "dotnet-sdk"
