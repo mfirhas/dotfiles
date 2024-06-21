@@ -45,6 +45,8 @@ display-inlay-hints = true
 "Y" = "yank"
 "R" = ":clipboard-paste-replace"
 "A-r" = "replace_with_yanked"
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 [keys.select]
 "{" = ["goto_prev_paragraph"]
@@ -56,6 +58,11 @@ display-inlay-hints = true
 "Y" = "yank"
 "R" = ":clipboard-paste-replace"
 "A-r" = "replace_with_yanked"
+"A-z" = ["normal_mode", "collapse_selection"]
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 [keys.insert]
 "C-space" = "completion"
+"A-z" = ["normal_mode", "collapse_selection"]
+
