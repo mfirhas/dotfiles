@@ -3,9 +3,17 @@ theme = "abu"
 
 [editor]
 line-number = "relative"
+cursorline = true
+completion-timeout = 5
+completion-trigger-len = 1
+preview-completion-insert	= false
+
+[editor.indent-guides]
+render = true
+character = "╎"
 
 [editor.cursor-shape]
-insert = "block"
+insert = "bar"
 normal = "block"
 select = "block"
 
@@ -13,8 +21,8 @@ select = "block"
 hidden = false
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name", "separator" , "version-control", "read-only-indicator", "file-modification-indicator"]
-center = []
+left = ["mode", "spinner", "separator", "version-control", "separator"]
+center = ["file-base-name", "read-only-indicator", "file-modification-indicator"]
 right = ["register", "diagnostics", "workspace-diagnostics", "total-line-numbers", "file-type", "file-line-ending", "selections", "position", "file-encoding"]
 separator = " "
 mode.normal = "NORMAL"
@@ -33,6 +41,10 @@ display-inlay-hints = true
 "L" = ["goto_window_bottom"]
 "p" = ["paste_before"]
 "P" = ["paste_after"]
+"y" = ":clipboard-yank"
+"Y" = "yank"
+"R" = ":clipboard-paste-replace"
+"A-r" = "replace_with_yanked"
 
 [keys.select]
 "{" = ["goto_prev_paragraph"]
@@ -40,6 +52,10 @@ display-inlay-hints = true
 "H" = ["goto_window_top"]
 "M" = ["goto_window_center"]
 "L" = ["goto_window_bottom"]
+"y" = ":clipboard-yank"
+"Y" = "yank"
+"R" = ":clipboard-paste-replace"
+"A-r" = "replace_with_yanked"
 
 [keys.insert]
 "C-space" = "completion"
