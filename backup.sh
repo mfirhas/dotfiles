@@ -40,7 +40,11 @@ cp -rp $HOME/.config/helix/ $HOME/code/github.com/mfirhas/dotfiles/.config/helix
 # gitui
 cp -rp $HOME/.config/gitui/ $HOME/code/github.com/mfirhas/dotfiles/.config/gitui/
 
+# broot
 cp -rp $HOME/.config/broot/ $HOME/code/github.com/mfirhas/dotfiles/.config/broot/
 
+# broot
 cp -rp $HOME/.config/nvim/ $HOME/code/github.com/mfirhas/dotfiles/.config/nvim/
 
+# gitconfig
+cp -p $HOME/.gitconfig $HOME/code/github.com/mfirhas/dotfiles/.gitconfig
