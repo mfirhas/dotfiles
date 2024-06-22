@@ -59,6 +59,11 @@ config.keys = {
     mods = 'ALT',
     action = wezterm.action.ToggleFullScreen,
   },
+  {
+    key = ';',
+    mods = 'CTRL',
+    action = wezterm.action.TogglePaneZoomState,
+  }
 }
 
 config.inactive_pane_hsb = {
