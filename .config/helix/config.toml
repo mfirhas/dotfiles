@@ -36,30 +36,28 @@ display-inlay-hints = true
 [keys.normal]
 "{" = ["goto_prev_paragraph", "collapse_selection"]
 "}" = ["goto_next_paragraph", "collapse_selection"]
-"H" = ["goto_window_top"]
-"M" = ["goto_window_center"]
-"L" = ["goto_window_bottom"]
-"p" = ["paste_before"]
-"P" = ["paste_after"]
 "y" = ":clipboard-yank"
 "Y" = "yank"
+"p" = ["paste_before"]
+"P" = ["paste_after"]
 "R" = ":clipboard-paste-replace"
 "A-r" = "replace_with_yanked"
+# shift line up
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+# shift line down
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 [keys.select]
 "{" = ["goto_prev_paragraph"]
 "}" = ["goto_next_paragraph"]
-"H" = ["goto_window_top"]
-"M" = ["goto_window_center"]
-"L" = ["goto_window_bottom"]
 "y" = ":clipboard-yank"
 "Y" = "yank"
 "R" = ":clipboard-paste-replace"
 "A-r" = "replace_with_yanked"
 "A-z" = ["normal_mode", "collapse_selection"]
+# shift line up
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+# shift line down
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 [keys.insert]
@@ -70,3 +68,6 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 "A-k" = "move_visual_line_up"
 "A-l" = "move_char_right"
 
+# git mode 
+[keys.normal.G]
+g = ":sh git status"
