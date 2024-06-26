@@ -21,8 +21,10 @@ select = "block"
 hidden = false
 
 [editor.statusline]
-left = ["mode", "spinner", "separator", "version-control", "separator"]
-center = ["file-base-name", "read-only-indicator", "file-modification-indicator"]
+# left = ["mode", "spinner", "separator", "version-control", "separator"]
+# "workspace" is PR from https://github.com/helix-editor/helix/pull/11035
+left = ["mode", "spinner", "separator", "version-control", "separator", "workspace"]
+center = ["file-name", "read-only-indicator", "file-modification-indicator"]
 right = ["register", "diagnostics", "workspace-diagnostics", "total-line-numbers", "file-type", "file-line-ending", "selections", "position", "file-encoding"]
 separator = " "
 mode.normal = "NORMAL"
@@ -62,6 +64,7 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 
 [keys.insert]
 "C-space" = "completion"
+"C-c" = "toggle_comments"
 "A-z" = ["normal_mode", "collapse_selection"]
 "A-h" = "move_char_left"
 "A-j" = "move_visual_line_down"
@@ -70,4 +73,7 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 
 # git mode 
 [keys.normal.G]
-g = ":sh git status"
+g = ":sh git status -vb"
+b = ":sh git branch -v"
+r = ":sh git branch -vr"
+t = ":sh git tag"

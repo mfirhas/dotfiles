@@ -4,8 +4,14 @@
 ### oh-my-zsh
 . "$HOME/.config/oh-my-zsh/oh-my-zsh.conf"
 
-### Rust
-export RUSTPATH=$HOME/code/rust
+### helix
+. "$HOME/.config/helix/helixrc"
+
+### fzf
+. "$HOME/.config/fzf/fzfrc"
+
+# broot
+. "$HOME/.config/broot/brootrc"
 
 ### Go
 export PATH=$PATH:/usr/local/bin
@@ -16,7 +22,7 @@ export PATH=$PATH:$GOPATH/bin
 export CONF=$HOME/.config
 export GITHUB=$HOME/code/github.com
 export GH=$GITHUB/mfirhas
-export GITHUB_SSH_KEYS_ADD=$HOME/code/script/sshadd.sh
+export GITHUB_SSH_KEYS_ADD=$GH/dotfiles/sshadd.sh
 
 ### VS Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
@@ -43,9 +49,6 @@ export PATH="/usr/local/opt/python@3/bin:$PATH"
 ### sonarqube
 export PATH=$PATH:/usr/local/Cellar/sonar-scanner/4.6.2.2472_1/bin
 
-### fzf
-. "$HOME/.config/fzf/fzfrc"
-
 ### aichat
 export AICHAT_CONFIG_DIR=$HOME/.config/aichat
 
@@ -55,4 +58,3 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 ### llvm
 #export PATH=$(brew --prefix)/opt/llvm/bin:$PATH
 
-. "$HOME/.config/broot/brootrc"
