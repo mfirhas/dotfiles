@@ -1,3 +1,5 @@
-export BROOT_EDITOR=/usr/local/bin/hx
+#export BROOT_EDITOR=/usr/local/bin/hx
+# local build to
+export BROOT_EDITOR=/usr/local/bin/hxx
 
 source /Users/mfirhas/.config/broot/launcher/bash/br

@@ -7,7 +7,7 @@ verbs: [
         shortcut: e
         key: ctrl-e
         apply_to: text_file
-        external: ["sh" "-e" "/Users/mfirhas/code/github.com/mfirhas/dotfiles/wezterm_open.sh" "hx" "{file}:{line}"]
+        external: ["sh" "-e" "/Users/mfirhas/code/github.com/mfirhas/dotfiles/wezterm_open.sh" "$BROOT_EDITOR" "{file}:{line}"]
         leave_broot: false
     }
    
@@ -16,7 +16,7 @@ verbs: [
         invocation: helix
         shortcut: hx
         key: alt-e
-        external: ["sh" "-e" "/Users/mfirhas/code/github.com/mfirhas/dotfiles/wezterm_open.sh" "hx" "{file}"]
+        external: ["sh" "-e" "/Users/mfirhas/code/github.com/mfirhas/dotfiles/wezterm_open.sh" "$BROOT_EDITOR" "{file}"]
         leave_broot: false
     }
 
