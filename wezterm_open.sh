@@ -38,12 +38,14 @@ get_pwd() {
 
 get_tab_title() {
   if [[ $filepath == *" "* ]]; then
+    local last_slash_separated=$(get_last_slash_separated "$binary")
     local last_space_separated=$(get_last_space_separated "$filepath")
     local base_space_separated=$(get_last_slash_separated "$last_space_separated")
-    echo "$binary - $base_space_separated"
+    echo "$last_slash_separated - $base_space_separated"
   else
+    local last_slash_separated=$(get_last_slash_separated "$binary")
     local base=$(get_last_slash_separated "$filepath")
-    echo "$binary - $base"
+    echo "$last_slash_separated - $base"
   fi
 }
 
