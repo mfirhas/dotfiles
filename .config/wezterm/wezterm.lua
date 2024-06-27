@@ -38,32 +38,43 @@ config.window_padding = {
 
 -- split panes in multiple directions, and toggle them, used for toggle 1 extra pane
 function toggle_split(direction)
-  return function(_, pane)
-      local tab = pane:tab()
-      local panes = tab:panes_with_info()
-      if #panes == 1 then
-        pane:split({
-            direction = direction,
-            size = 0.5,
-        })
-      elseif direction == 'Top' or direction == 'Left' then
-        if not panes[2].is_zoomed then
-          panes[2].pane:activate()
-          tab:set_zoomed(true)
-        elseif panes[2].is_zoomed then
-          tab:set_zoomed(false)
-          panes[1].pane:activate()
-        end
-      else
-        if not panes[1].is_zoomed then
-          panes[1].pane:activate()
-          tab:set_zoomed(true)
-        elseif panes[1].is_zoomed then
-          tab:set_zoomed(false)
-          panes[2].pane:activate()
-        end
-      end
+  local pane_size = 0.5
+  if direction == "Left" then
+    pane_size = 0.3
+  elseif direction == "Right" then
+    pane_size = 0.7
   end
+
+  return function(_, pane)
+
+    local tab = pane:tab()
+    local panes = tab:panes_with_info()
+
+    if #panes == 1 then
+      pane:split({
+          direction = direction,
+          size = pane_size,
+      })
+    elseif direction == 'Top' or direction == 'Left' then
+      if not panes[2].is_zoomed then
+        panes[2].pane:activate()
+        tab:set_zoomed(true)
+      elseif panes[2].is_zoomed then
+        tab:set_zoomed(false)
+        panes[1].pane:activate()
+      end
+    else
+      if not panes[1].is_zoomed then
+        panes[1].pane:activate()
+        tab:set_zoomed(true)
+      elseif panes[1].is_zoomed then
+        tab:set_zoomed(false)
+        panes[2].pane:activate()
+      end
+    end
+
+  end
+
 end
 
 config.keys = {
