@@ -48,3 +48,6 @@ cp -rp $HOME/.config/nvim/ $HOME/code/github.com/mfirhas/dotfiles/.config/nvim/
 
 # gitconfig
 cp -p $HOME/.gitconfig $HOME/code/github.com/mfirhas/dotfiles/.gitconfig
+
+# bat
+cp -rp $HOME/.config/bat/ $HOME/code/github.com/mfirhas/dotfiles/.config/bat/

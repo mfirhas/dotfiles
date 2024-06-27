@@ -1,5 +1,7 @@
 # This script will set wezterm tab title and execute $1 with arg $2
 
+export BROOT_SELECTED_CWD="$2"
+
 binary="$1"
 filepath="$2"
 
