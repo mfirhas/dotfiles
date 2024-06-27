@@ -77,3 +77,7 @@ g = ":sh git status -vb"
 b = ":sh git branch -v"
 r = ":sh git branch -vr"
 t = ":sh git tag"
+
+# terminal mode
+[keys.normal.T]
+p = ":sh wezterm cli list"
