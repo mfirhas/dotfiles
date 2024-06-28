@@ -115,6 +115,26 @@ verbs: [
         execution: ":toggle_preview"
     }
 
+    # shortcuts to certain directories
+
+    # $HOME
+    {
+        invocation: home
+        internal: ":focus ~"
+    }
+
+    # config file
+    {
+        invocation: conf
+        internal: ":focus ~/.config"
+    }
+
+    # github.com/mfirhas
+    {
+        invocation: gh
+        internal: ":focus ~/code/github.com/mfirhas"
+    }
+
     # On ctrl-b, propose the creation of a copy of the selection.
     # While this might occasionally be useful, this verb is mostly here
     # as an example to demonstrate rare standard groups like {file-stem}
@@ -156,14 +176,7 @@ verbs: [
         external: "cp -r {directory}/* {dest}"
         from_shell: true
     }
-
-    # Here's an example of a shortcut bringing you to your home directory
-    # {
-    #     invocation: home
-    #     key: ctrl-home
-    #     execution: ":focus ~"
-    # }
-    
+   
     {
         key: ctrl-u
         execution: ":page_up"
