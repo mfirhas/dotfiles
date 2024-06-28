@@ -53,4 +53,4 @@ get_tab_title() {
 
 wezterm cli set-tab-title "$(get_tab_title)"
 $binary $filepath
-wezterm cli set-tab-title "$(get_pwd)"
+wezterm cli set-tab-title "zsh"
