@@ -75,6 +75,7 @@ brew "musl-cross"
 # mac to windows mingw linker
 brew "mingw-w64"
 
+cask "font-code-new-roman-nerd-font"
 cask "dbeaver-community"
 cask "dotnet-sdk"
 cask "mactex-no-gui"
