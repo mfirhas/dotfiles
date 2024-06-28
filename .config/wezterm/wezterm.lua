@@ -36,6 +36,13 @@ config.window_padding = {
   bottom = 0,
 }
 
+function split_pane(pane, direction, pane_size) 
+  pane:split({
+      direction = direction,
+      size = pane_size,
+  })
+end
+
 -- split panes in multiple directions, and toggle them, used for toggle 1 extra pane
 function toggle_split(direction)
   local pane_size = 0.5
@@ -51,10 +58,7 @@ function toggle_split(direction)
     local panes = tab:panes_with_info()
 
     if #panes == 1 then
-      pane:split({
-          direction = direction,
-          size = pane_size,
-      })
+      split_pane(pane, direction, pane_size)
     elseif direction == 'Top' or direction == 'Left' then
       if not panes[2].is_zoomed then
         panes[2].pane:activate()
