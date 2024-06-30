@@ -1,7 +1,17 @@
-# This script will set wezterm tab title and execute $1 with arg $2
+#!/bin/bash
 
-binary="$1"
-filepath="$2"
+# This script will open helix setting the dir path of open file and tab's title
+
+filepath="$1"
+
+# check if input is empty or "."
+parse_filepath() {
+  if [ -z "$filepath" ] || [ "$filepath" = "." ]; then		
+    echo "$(pwd)"
+	else
+		echo "$filepath"
+	fi
+}
 
 # get last part of space separated string
 get_last_space_separated() {
@@ -36,18 +46,16 @@ get_pwd() {
 
 get_tab_title() {
   if [[ $filepath == *" "* ]]; then
-    local last_slash_separated=$(get_last_slash_separated "$binary")
     local last_space_separated=$(get_last_space_separated "$filepath")
     local base_space_separated=$(get_last_slash_separated "$last_space_separated")
-    echo "$last_slash_separated - $base_space_separated"
+    echo "hxx - $base_space_separated"
   else
-    local last_slash_separated=$(get_last_slash_separated "$binary")
     local base=$(get_last_slash_separated "$filepath")
-    echo "$last_slash_separated - $base"
+    echo "hxx - $base"
   fi
 }
 
-wezterm set-working-directory $filepath
+wezterm set-working-directory $(parse_filepath)
 wezterm cli set-tab-title "$(get_tab_title)"
-$binary $filepath
+hxx $filepath
 wezterm cli set-tab-title "zsh"

@@ -24,6 +24,8 @@ export GITHUB=$HOME/code/github.com
 export GH=$GITHUB/mfirhas
 export GITHUB_SSH_KEYS_ADD=$GH/dotfiles/sshadd.sh
 
+export PATH=$PATH:$GH/dotfiles/bin
+
 ### VS Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
