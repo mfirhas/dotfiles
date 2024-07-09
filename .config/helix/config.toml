@@ -46,9 +46,9 @@ display-inlay-hints = true
 "A-r" = "replace_with_yanked"
 # cut
 "D" = [":clipboard-yank", "delete_selection_noyank"]
-# shift line up
-C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 # shift line down
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+# shift line up
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 [keys.select]
@@ -61,9 +61,9 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 "A-z" = ["collapse_selection", "normal_mode"]
 # cut
 "D" = [":clipboard-yank", "delete_selection_noyank"]
-# shift line up
-C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 # shift line down
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+# shift line up
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 [keys.insert]
