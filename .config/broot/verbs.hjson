@@ -192,6 +192,13 @@ verbs: [
         key: alt-g
         execution: ":toggle_git_status"
     }
+
+    # copy path
+    {
+        invocation: copy_path
+        key: ctrl-y
+        internal: ":copy_path"
+    }
     
 ]
 
