@@ -26,7 +26,7 @@ config.colors = {
     selection_fg = selection_fg,
   }
 config.font = wezterm.font(font)
-config.font_size = 12
+config.font_size = 11
 config.show_new_tab_button_in_tab_bar = false
 config.tab_max_width = 100
 config.use_fancy_tab_bar = false
