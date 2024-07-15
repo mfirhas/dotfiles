@@ -1,5 +1,8 @@
+# symlink to homebrew installation in Cellar
 #export BROOT_EDITOR=/usr/local/bin/hx
-# local build to
+
+# symlink to local build $HOME/.cargo/bin/hx
 export BROOT_EDITOR=/usr/local/bin/hxx
 
+# setup by broot
 source /Users/mfirhas/.config/broot/launcher/bash/br
