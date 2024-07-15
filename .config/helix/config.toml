@@ -81,6 +81,7 @@ g = ":sh git status -vb"
 b = ":sh git branch -v"
 r = ":sh git branch -vr"
 t = ":sh git tag"
+u = ":reset-diff-change"
 
 # terminal mode
 [keys.normal.T]
