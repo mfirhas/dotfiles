@@ -7,6 +7,12 @@
 # bottom center pane: gitui at current directory
 # bottom right pane: lazydocker at current directory
 
+path=$1
+
+if [ -n "$path" ]; then
+  wezterm set-working-directory $path
+fi
+
 top_left_pane_id=$(wezterm cli list-clients --format=json | jq '.[0].focused_pane_id')
 
 bottom_left_pane_id=$(wezterm cli split-pane)
