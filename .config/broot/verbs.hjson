@@ -60,6 +60,14 @@ verbs: [
         leave_broot: false
     }
 
+    # Open workspace: helix with multiple panes: terminal, gitui, and lazydocker
+    {
+        name: workspace
+        invocation: workspace
+        external: "workspace {file}"
+        leave_broot: false
+    }
+
     # Launching `tail -n` on the selected file (leaving broot)
     {
         name: tail_lines
