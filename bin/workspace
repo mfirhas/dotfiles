@@ -9,7 +9,7 @@
 
 top_left_pane_id=$(wezterm cli list-clients --format=json | jq '.[0].focused_pane_id')
 
-bottom_left_pane_id=$(wezterm cli split-pane -- btop)
+bottom_left_pane_id=$(wezterm cli split-pane)
 
 bottom_center_pane_id=$(wezterm cli split-pane --right --pane-id=$bottom_left_pane_id -- gitui)
 
