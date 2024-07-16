@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# this script will open workspace at a directory along with:
+# top-left pane: helix
+# right pane: terminal
+# bottom left pane: broot at current directory
+# bottom center pane: gitui at current directory
+# bottom right pane: lazydocker at current directory
+
+top_left_pane_id=$(wezterm cli list-clients --format=json | jq '.[0].focused_pane_id')
+
+bottom_left_pane_id=$(wezterm cli split-pane -- btop)
+
+bottom_center_pane_id=$(wezterm cli split-pane --right --pane-id=$bottom_left_pane_id -- gitui)
+
+bottom_right_pane_id=$(wezterm cli split-pane --right --pane-id=$bottom_center_pane_id -- lazydocker)
+
+top_right_pane_id=$(wezterm cli split-pane --right)
+
+wezterm cli activate-pane --pane-id $top_left_pane_id 
+
+hxs $1
