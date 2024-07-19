@@ -153,12 +153,22 @@ config.keys = {
     mods = 'CMD',
     action = wezterm.action.CloseCurrentPane { confirm = true },
   },
+
+  -- close current tab
+  {
+    key = 'W',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.CloseCurrentTab { confirm = true },
+  },
+
   { key = '/', mods = 'CTRL', action = wezterm.action.PaneSelect },
+
   {
     key = '=',
     mods = 'ALT',
     action = wezterm.action.ToggleFullScreen,
   },
+
   -- toggle current pane full screen
   {
     key = ';',
