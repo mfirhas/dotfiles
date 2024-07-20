@@ -4,6 +4,7 @@ inherits = "catppuccin_mocha"
 "ui.selection" = { bg = "abu_selection_color" }
 # blocked area of current cursor in multiple selection
 "ui.selection.primary" = { bg = "abu_selection_primary_color" }
+"ui.virtual.inlay-hint" = { fg = "overlay0", bg = "base" }
 
 [palette]
 base = "#1d2129"
