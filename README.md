@@ -18,6 +18,27 @@ All things managed by Homebrew are inside this file, install them by running:
 brew bundle install
 ```
 
-Rust:
-Managed by Rustup and Cargo for some binaries installations.
+Setup:
 
+Scripts:
+- Add x permission to scripts inside `bin/` dir: `chmod +x *`
+
+Helix:
+- local build: `cargo install --path helix-term --locked`
+- Create symlink to local build binary: `sudo ln -sf $HOME/.cargo/bin/hx /usr/local/bin/hxx`
+- Use hxx for local build helix
+- use hxs for workspace with helix, gitui, lazydocker, and terminals.
+
+Rust:
+- Install Rust through [rustup](https://rustup.rs/)
+- Install rust-analyzer `cargo install rust-analyzer`, it installs inside `$HOME/.cargo/bin`
+- For debugging: 
+  - Install llvm from homebrew: `brew install llvm`
+  - Create symlink lldb-dap: `ln -sf /usr/local/opt/llvm/bin/lldb-dap /usr/local/bin/lldb-dap`
+  - Create symlink for script to help debug String data: `ln -s $GH/dotfiles/lldb_vscode_rustc_primer.py  /usr/local/etc/lldb_vscode_rustc_primer.py`
+
+Go:
+- Install Go with homebrew `brew install go`
+- Install lsp gopls: `go install golang.org/x/tools/gopls@latest`
+- Install dap dlv: `go install github.com/go-delve/delve/cmd/dlv@latest`
+- Install lint server [golangci-lint-langserver](https://github.com/nametake/golangci-lint-langserver) : `go install github.com/nametake/golangci-lint-langserver@v0.0.8`

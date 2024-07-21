@@ -1,13 +1,33 @@
 [[language]]
 name = "rust"
 
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
 [language.debugger]
-name = "lldb-vscode"
+name = "lldb-dap"
 transport = "stdio"
-command = "lldb-vscode"
+command = "lldb-dap"
 
 [[language.debugger.templates]]
 name = "binary"
 request = "launch"
 completion = [ { name = "binary", completion = "filename" } ]
 args = { program = "{0}", initCommands = [ "command script import /usr/local/etc/lldb_vscode_rustc_primer.py" ] }
+
+# golang lint server
+# enable all lints
+[language-server.golangci-lint-lsp.config]
+command = [
+  "golangci-lint",
+  "run",
+  "--enable-all",
+  "--out-format",
+  "json",
+  "--issues-exit-code=1",
+]
