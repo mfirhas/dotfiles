@@ -60,8 +60,6 @@ brew "typescript"
 brew "vegeta"
 brew "wrk"
 brew "x86_64-linux-gnu-binutils"
-brew "zellij"
-brew "sqlx-cli"
 brew "mdbook"
 
 # mac to linux gnu linker
