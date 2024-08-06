@@ -26,8 +26,9 @@ brew bundle install
 ## Helix:
 - local build: `cargo install --path helix-term --locked`
 - Create symlink to local build binary: `sudo ln -sf $HOME/.cargo/bin/hx /usr/local/bin/hxx`
-- Use hxx for local build helix
-- use hxs for workspace with helix, gitui, lazydocker, and terminals.
+- Use `hxx` for local build helix
+- Use `hxs` for customised tab title
+- use `workspace` for workspace with helix, gitui, lazydocker, and terminals.
 
 ## Rust:
 - Install Rust through [rustup](https://rustup.rs/)
