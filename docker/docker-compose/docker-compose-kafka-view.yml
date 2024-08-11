@@ -1,0 +1,14 @@
+version: '3.1'
+
+services: 
+  kafka-view:
+    image: fede1024/kafka-view
+    container_name: kafka-view
+    ports:
+      - 8383:8080
+    volumes:
+      - kafka-config:/root/config.yaml
+    command: --conf config.yaml
+
+volumes:
+  kafka-config:

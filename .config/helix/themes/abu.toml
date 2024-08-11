@@ -8,6 +8,6 @@ inherits = "catppuccin_mocha"
 
 [palette]
 base = "#1d2129"
-abu_selection_color = "#30323e"
+abu_selection_color = "#444651"
 abu_selection_primary_color = "#545662"
 
