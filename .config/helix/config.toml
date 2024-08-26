@@ -93,3 +93,8 @@ p = ":sh wezterm cli list"
 c = ":sh cargo check 2>&1"
 t = ":sh cargo test -- --exact --nocapture 2>&1"
 b = ":sh cargo build 2>&1"
+
+# file-tree explorer config
+# merged from PR: https://github.com/helix-editor/helix/pull/5768
+[editor.explorer]
+column-width = 50
