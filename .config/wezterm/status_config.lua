@@ -15,9 +15,12 @@ local function segments_for_right_status(wezterm, window, pane)
 
   local username = os.getenv('USER') or os.getenv('LOGNAME') or os.getenv('USERNAME')
 
+  local tab = window:active_tab()
+  local pane_count = #tab:panes()
+
   return {
+    pane_count,
     bat,
-    window:active_workspace(),
     wezterm.hostname(),
     username,
     wezterm.strftime('%a %-d %b %Y %H:%M'),
