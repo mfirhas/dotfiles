@@ -17,9 +17,13 @@ local function segments_for_right_status(wezterm, window, pane)
 
   local tab = window:active_tab()
   local pane_count = #tab:panes()
+  local pane_count_str = string.format('%d pane', pane_count)
+  if pane_count > 1 then
+  	pane_count_str = pane_count_str .. 's'
+  end
 
   return {
-    pane_count,
+    pane_count_str,
     bat,
     wezterm.hostname(),
     username,
