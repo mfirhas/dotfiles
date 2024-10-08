@@ -48,6 +48,9 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 ### python 3
 export PATH="/usr/local/opt/python@3/bin:$PATH"
 
+# Created by `pipx` on 2024-10-08 02:41:45
+export PATH="$PATH:/Users/mfirhas/.local/bin"
+
 ### sonarqube
 export PATH=$PATH:/usr/local/Cellar/sonar-scanner/4.6.2.2472_1/bin
 
@@ -59,4 +62,5 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 ### llvm
 #export PATH=$(brew --prefix)/opt/llvm/bin:$PATH
+
 
