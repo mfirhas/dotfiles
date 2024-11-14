@@ -8,6 +8,9 @@ completion-timeout = 5
 completion-trigger-len = 1
 preview-completion-insert	= false
 
+[editor.soft-wrap]
+enable = true
+
 [editor.indent-guides]
 render = true
 character = "╎"
