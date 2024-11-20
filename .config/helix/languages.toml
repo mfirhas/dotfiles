@@ -7,7 +7,7 @@ name = "rust"
 '[' = ']'
 '"' = '"'
 '`' = '`'
-'<' = '>'
+# '<' = '>'
 
 [language.debugger]
 name = "lldb-dap"
