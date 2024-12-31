@@ -36,11 +36,11 @@ export PATH=/usr/local/texlive/2020basic/bin/x86_64-darwin:$PATH
 
 ### Java
 # java 11
-# export JAVA_HOME=/usr/local/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home
+export JAVA_HOME=/usr/local/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home
 # java 17
 # export JAVA_HOME=/usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
 # java 21
-export JAVA_HOME=/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+# export JAVA_HOME=/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
 
 ### ruby 3
 export PATH="/usr/local/opt/ruby/bin:$PATH"
