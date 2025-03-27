@@ -25,6 +25,7 @@ export GH=$GITHUB/mfirhas
 export GITHUB_SSH_KEYS_ADD=$GH/dotfiles/sshadd.sh
 
 export PATH=$PATH:$GH/dotfiles/bin
+export PATH="$(brew --prefix binutils)/bin:$PATH"
 
 ### VS Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
@@ -41,6 +42,8 @@ export JAVA_HOME=/usr/local/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home
 # export JAVA_HOME=/usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
 # java 21
 # export JAVA_HOME=/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+# java 23
+# export JAVA_HOME=/usr/local/opt/openjdk@23/libexec/openjdk.jdk/Contents/Home
 
 ### ruby 3
 export PATH="/usr/local/opt/ruby/bin:$PATH"
