@@ -7,6 +7,7 @@ cursorline = true
 completion-timeout = 5
 completion-trigger-len = 1
 preview-completion-insert	= false
+bufferline = "multiple"
 
 [editor.soft-wrap]
 enable = true
@@ -54,6 +55,12 @@ display-inlay-hints = true
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 # shift line/selections up
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+# go to tabs on the right
+"A-}" = ["goto_next_buffer"]
+# go to tabs on the left
+"A-{" = ["goto_previous_buffer"]
+# close current tab/buffer
+"A-w" = ":buffer-close"
 
 [keys.select]
 "{" = ["goto_prev_paragraph"]
