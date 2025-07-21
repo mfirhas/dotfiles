@@ -22,6 +22,11 @@ completion = [ { name = "binary", completion = "filename" } ]
 args = { program = "{0}", initCommands = [ "command script import /usr/local/etc/lldb_vscode_rustc_primer.py" ] }
 
 # GOLANG
+[[language]]
+name = "go"
+language-servers = ["gopls", "golangci-lint-lsp"]
+auto-format = true
+
 [language-server.golangci-lint-lsp.config]
 command = [
   "golangci-lint",
