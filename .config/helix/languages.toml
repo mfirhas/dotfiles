@@ -1,3 +1,4 @@
+# RUST
 [[language]]
 name = "rust"
 
@@ -20,8 +21,7 @@ request = "launch"
 completion = [ { name = "binary", completion = "filename" } ]
 args = { program = "{0}", initCommands = [ "command script import /usr/local/etc/lldb_vscode_rustc_primer.py" ] }
 
-# golang lint server
-# enable all lints
+# GOLANG
 [language-server.golangci-lint-lsp.config]
 command = [
   "golangci-lint",
@@ -32,3 +32,11 @@ command = [
   "json",
   "--issues-exit-code=1",
 ]
+
+# YAML
+[[language]]
+name = "yaml"
+language-servers = ["yaml-language-server"]
+
+[language-server.yaml-language-server]
+config = { yaml = { customTags = ["!anything"] } }
