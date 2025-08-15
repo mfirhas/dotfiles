@@ -77,6 +77,12 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 # shift line/selections up
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+# go to tabs on the right
+"A-}" = ["goto_next_buffer"]
+# go to tabs on the left
+"A-{" = ["goto_previous_buffer"]
+# close current tab/buffer
+"A-w" = ":buffer-close"
 
 [keys.insert]
 "C-space" = "completion"
@@ -111,4 +117,10 @@ b = ":sh cargo build 2>&1"
 [editor.explorer]
 column-width = 50
 # source: https://github.com/mfirhas/helix/commit/64e69caf32d358ba8ce4b4d03be329b68c850190#diff-90493a3122e39c4af3ab5f7981bfb82ac755b79174a2fb13e801bec7d416adf0R41
-ignore-list = [".git/", ".DS_Store", "target/"]
+ignore-list = [
+  ".git/", 
+  ".DS_Store", 
+  "target/", 
+  ".idea/", 
+  ".pytest_cache/"
+  ]
