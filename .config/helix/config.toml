@@ -25,7 +25,7 @@ select = "block"
 hidden = false
 
 [editor.statusline]
-# left = ["mode", "spinner", "separator", "version-control", "separator"]
+# left = ["mode", "spinner", "separator", "version-control", "separator", "current-working-directory"]
 # "workspace" is PR from https://github.com/helix-editor/helix/pull/11035
 left = ["mode", "spinner", "separator", "version-control", "separator", "workspace"]
 center = ["file-name", "read-only-indicator", "file-modification-indicator"]
