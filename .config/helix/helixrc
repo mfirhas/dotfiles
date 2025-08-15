@@ -1,1 +1,1 @@
-export HELIX_RUNTIME=/usr/local/Cellar/helix/24.07/libexec/runtime
+# export HELIX_RUNTIME=/usr/local/Cellar/helix/24.07/libexec/runtime
