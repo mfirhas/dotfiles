@@ -5,4 +5,4 @@
 export BROOT_EDITOR=/usr/local/bin/hxx
 
 # setup by broot
-source /Users/mfirhas/.config/broot/launcher/bash/br
+source $HOME/.config/broot/launcher/bash/br
