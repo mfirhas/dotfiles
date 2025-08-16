@@ -1,1 +1,1 @@
-export HELIX_RUNTIME=$HOME/backup/helix_runtime/runtime
+export HELIX_RUNTIME=$HOME/backup/helix_runtime/24.7/runtime
