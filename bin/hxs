@@ -4,13 +4,24 @@
 
 filepath="$1"
 
-# check if input is empty or "."
+# check if input is empty or "." or validate if it's a real path
 parse_filepath() {
   if [ -z "$filepath" ] || [ "$filepath" = "." ]; then		
     echo "$(pwd)"
-	else
-		echo "$filepath"
-	fi
+  else
+    # Check if the path exists
+    if [ -e "$filepath" ]; then
+      # If it's a file, get its directory; if it's a directory, use it as-is
+      if [ -f "$filepath" ]; then
+        echo "$(dirname "$filepath")"
+      elif [ -d "$filepath" ]; then
+        echo "$filepath"
+      fi
+    else
+      echo "Error: Path '$filepath' does not exist" >&2
+      exit 1
+    fi
+  fi
 }
 
 # get last part of space separated string
@@ -56,8 +67,15 @@ get_tab_title() {
   fi
 }
 
+# Parse and validate the filepath
 parsed_path=$(parse_filepath)
+
+# Exit if parse_filepath failed
+if [ $? -ne 0 ]; then
+  exit 1
+fi
+
 wezterm set-working-directory "$parsed_path"
 wezterm cli set-tab-title "$(get_tab_title "$parsed_path")"
-hxx "$parsed_path"
+hxx "$filepath"
 wezterm cli set-tab-title "zsh"
