@@ -45,17 +45,19 @@ get_pwd() {
 }
 
 get_tab_title() {
-  if [[ $filepath == *" "* ]]; then
-    local last_space_separated=$(get_last_space_separated "$filepath")
+  local filepath_param="$1"  # Use the parameter instead of global $filepath
+  if [[ $filepath_param == *" "* ]]; then
+    local last_space_separated=$(get_last_space_separated "$filepath_param")
     local base_space_separated=$(get_last_slash_separated "$last_space_separated")
     echo "hxx - $base_space_separated"
   else
-    local base=$(get_last_slash_separated "$filepath")
+    local base=$(get_last_slash_separated "$filepath_param")
     echo "hxx - $base"
   fi
 }
 
-wezterm set-working-directory $(parse_filepath)
-wezterm cli set-tab-title "$(get_tab_title)"
-hxx $filepath
+parsed_path=$(parse_filepath)
+wezterm set-working-directory "$parsed_path"
+wezterm cli set-tab-title "$(get_tab_title "$parsed_path")"
+hxx "$parsed_path"
 wezterm cli set-tab-title "zsh"
