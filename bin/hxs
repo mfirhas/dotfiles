@@ -2,6 +2,9 @@
 
 # This script will open helix setting the dir path of open file and tab's title
 
+# Editor to use
+EDITOR_BINARY="hxx"
+
 filepath="$1"
 
 # check if input is empty or "." or validate if it's a real path
@@ -60,10 +63,10 @@ get_tab_title() {
   if [[ $filepath_param == *" "* ]]; then
     local last_space_separated=$(get_last_space_separated "$filepath_param")
     local base_space_separated=$(get_last_slash_separated "$last_space_separated")
-    echo "hxx - $base_space_separated"
+    echo "$EDITOR_BINARY - $base_space_separated"
   else
     local base=$(get_last_slash_separated "$filepath_param")
-    echo "hxx - $base"
+    echo "$EDITOR_BINARY - $base"
   fi
 }
 
@@ -77,5 +80,5 @@ fi
 
 wezterm set-working-directory "$parsed_path"
 wezterm cli set-tab-title "$(get_tab_title "$parsed_path")"
-hxx "$filepath"
+$EDITOR_BINARY "$filepath"
 wezterm cli set-tab-title "zsh"
