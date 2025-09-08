@@ -25,7 +25,7 @@ export GH=$GITHUB/mfirhas
 export GITHUB_SSH_KEYS_ADD=$GH/dotfiles/sshadd.sh
 
 export PATH=$PATH:$GH/dotfiles/bin
-export PATH="$(brew --prefix binutils)/bin:$PATH"
+# export PATH="$(brew --prefix binutils)/bin:$PATH"
 
 ### VS Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
@@ -65,5 +65,4 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 ### llvm
 #export PATH=$(brew --prefix)/opt/llvm/bin:$PATH
-
 
