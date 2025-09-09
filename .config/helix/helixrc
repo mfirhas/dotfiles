@@ -1,1 +1,4 @@
-export HELIX_RUNTIME=$HOME/backup/helix_runtime/24.7/runtime
+## Old version customed with left-side file explorer
+# export HELIX_RUNTIME=$HOME/backup/helix_runtime/24.7/runtime
+
+export HELIX_RUNTIME=/usr/local/Cellar/helix/25.07.1/libexec/runtime

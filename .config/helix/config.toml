@@ -25,9 +25,11 @@ select = "block"
 hidden = false
 
 [editor.statusline]
-# left = ["mode", "spinner", "separator", "version-control", "separator", "current-working-directory"]
-# "workspace" is PR from https://github.com/helix-editor/helix/pull/11035
-left = ["mode", "spinner", "separator", "version-control", "separator", "workspace"]
+left = ["mode", "spinner", "separator", "version-control", "separator", "current-working-directory"]
+## "workspace_directory" still buggy
+# left = ["mode", "spinner", "separator", "version-control", "separator", "current-working-directory", "workspace_directory"]
+## "workspace" is PR from https://github.com/helix-editor/helix/pull/11035
+# left = ["mode", "spinner", "separator", "version-control", "separator", "workspace"]
 center = ["file-name", "read-only-indicator", "file-modification-indicator"]
 right = ["register", "diagnostics", "workspace-diagnostics", "file-type", "file-line-ending", "selections", "total-line-numbers", "position", "file-encoding"]
 separator = " "
@@ -114,13 +116,13 @@ b = ":sh cargo build 2>&1"
 
 # file-tree explorer config
 # merged from PR: https://github.com/helix-editor/helix/pull/5768
-[editor.explorer]
-column-width = 50
-# source: https://github.com/mfirhas/helix/commit/64e69caf32d358ba8ce4b4d03be329b68c850190#diff-90493a3122e39c4af3ab5f7981bfb82ac755b79174a2fb13e801bec7d416adf0R41
-ignore-list = [
-  ".git/", 
-  ".DS_Store", 
-  "target/", 
-  ".idea/", 
-  ".pytest_cache/"
-  ]
+# [editor.explorer]
+# column-width = 50
+# # source: https://github.com/mfirhas/helix/commit/64e69caf32d358ba8ce4b4d03be329b68c850190#diff-90493a3122e39c4af3ab5f7981bfb82ac755b79174a2fb13e801bec7d416adf0R41
+# ignore-list = [
+#   ".git/", 
+#   ".DS_Store", 
+#   "target/", 
+#   ".idea/", 
+#   ".pytest_cache/"
+#   ]
