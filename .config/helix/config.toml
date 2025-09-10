@@ -98,8 +98,8 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 # git mode 
 [keys.normal.G]
 g = ":sh git status -vb"
-b = ":sh git branch -v"
-r = ":sh git branch -vr"
+b = ":sh git blame -L %{selection_line_start},%{selection_line_end} %{buffer_name}"
+r = ":sh git branch -v"
 t = ":sh git tag"
 u = ":reset-diff-change"
 
@@ -107,8 +107,8 @@ u = ":reset-diff-change"
 [keys.normal.T]
 p = ":sh wezterm cli list"
 
-# languages mode
-## rust
+## languages mode
+# rust
 [keys.normal.L.r]
 c = ":sh cargo check 2>&1"
 t = ":sh cargo test -- --exact --nocapture 2>&1"
