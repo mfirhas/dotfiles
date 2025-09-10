@@ -26,8 +26,6 @@ hidden = false
 
 [editor.statusline]
 left = ["mode", "spinner", "separator", "version-control", "separator", "current-working-directory"]
-## "workspace_directory" still buggy
-# left = ["mode", "spinner", "separator", "version-control", "separator", "current-working-directory", "workspace_directory"]
 ## "workspace" is PR from https://github.com/helix-editor/helix/pull/11035
 # left = ["mode", "spinner", "separator", "version-control", "separator", "workspace"]
 center = ["file-name", "read-only-indicator", "file-modification-indicator"]
@@ -95,6 +93,8 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 "A-k" = "move_visual_line_up"
 "A-l" = "move_char_right"
 
+### Custom Mode
+# Custom key bindings
 # git mode 
 [keys.normal.G]
 g = ":sh git status -vb"
