@@ -111,7 +111,8 @@ p = ":sh wezterm cli list"
 # rust
 [keys.normal.L.r]
 c = ":sh cargo check 2>&1"
-t = ":sh cargo test -- --exact --nocapture 2>&1"
+a = ":sh echo \"cargo test -- --nocapture\" | pbcopy"
+t = ":sh echo \"cargo test %{selection} -- --nocapture\" | pbcopy"
 b = ":sh cargo build 2>&1"
 
 # golang
