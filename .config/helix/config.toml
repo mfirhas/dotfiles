@@ -114,6 +114,17 @@ c = ":sh cargo check 2>&1"
 t = ":sh cargo test -- --exact --nocapture 2>&1"
 b = ":sh cargo build 2>&1"
 
+# golang
+[keys.normal.L.g]
+# Run all tests
+a = ":sh echo \"go test -v -cover -race\" ./... | pbcopy"
+# Run test for a test function inside a directory/package
+t = ":sh echo \"go test -v -cover -race -run %{selection}\" %sh{dirname %{workspace_directory}/%{buffer_name}} | pbcopy"
+# Run all tests inside a directory/package
+p = ":sh echo \"go test -v -cover -race\" %sh{dirname %{workspace_directory}/%{buffer_name}} | pbcopy"
+# clean test cache
+c = ":sh go clean -testcache"
+
 # file-tree explorer config
 # merged from PR: https://github.com/helix-editor/helix/pull/5768
 # [editor.explorer]
