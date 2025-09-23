@@ -26,17 +26,10 @@ args = { program = "{0}", initCommands = [ "command script import /usr/local/etc
 name = "go"
 language-servers = ["gopls", "golangci-lint-lsp"]
 auto-format = true
+formatter = ["gofmt"]
 
-[language-server.golangci-lint-lsp.config]
-command = [
-  "golangci-lint",
-  "run",
-  "--enable-all",
-  "--verbose",
-  "--out-format",
-  "json",
-  "--issues-exit-code=1",
-]
+[language-server.golangci-lint-lsp]
+command = "golangci-lint-langserver"
 
 # YAML
 [[language]]
