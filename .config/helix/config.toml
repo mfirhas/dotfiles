@@ -104,8 +104,13 @@ t = ":sh git tag"
 u = ":reset-diff-change"
 
 # terminal mode
+## shortcuts for other things
 [keys.normal.T]
 p = ":sh wezterm cli list"
+# copy current buffer relative path(relative to current workspace root)
+y = ":sh echo \"%{buffer_name}\" | pbcopy"
+# copy current buffer full path
+Y = ":sh echo \"%{workspace_directory}/%{buffer_name}\" | pbcopy"
 
 ## languages mode
 # rust
