@@ -3,13 +3,32 @@ version: '3.1'
 # source: https://github.com/SonarSource/docker-sonarqube/blob/master/example-compose-files/sq-with-postgres/docker-compose.yml
 
 services:
+  db:
+    image: postgres:12
+    container_name: postgres-sonar
+    environment:
+      POSTGRES_USER: sonar
+      POSTGRES_PASSWORD: sonar
+      POSTGRES_DB: sonar
+    volumes:
+      - sonarqube_postgresql:/var/lib/postgresql
+      - sonarqube_postgresql_data:/var/lib/postgresql/data
+    networks:
+      - sonarnet
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sonar"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   sonarqube:
-    image: sonarqube:latest
+    image: sonarqube:community
     container_name: sonarqube
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     ports:
-      - "9000:9000"
+      - "9002:9000"
     networks:
       - sonarnet
     environment:
@@ -20,18 +39,6 @@ services:
       - sonarqube_data:/opt/sonarqube/data
       - sonarqube_extensions:/opt/sonarqube/extensions
       - sonarqube_logs:/opt/sonarqube/logs
-      - sonarqube_temp:/opt/sonarqube/temp
-  db:
-    image: postgres:10-alpine
-    container_name: postgres-sonar
-    networks:
-      - sonarnet
-    environment:
-      POSTGRES_USER: sonar
-      POSTGRES_PASSWORD: sonar
-    volumes:
-      - sonarqube_postgresql:/var/lib/postgresql
-      - sonarqube_postgresql_data:/var/lib/postgresql/data
 
 networks:
   sonarnet:
@@ -41,6 +48,5 @@ volumes:
   sonarqube_data:
   sonarqube_extensions:
   sonarqube_logs:
-  sonarqube_temp:
   sonarqube_postgresql:
   sonarqube_postgresql_data:
