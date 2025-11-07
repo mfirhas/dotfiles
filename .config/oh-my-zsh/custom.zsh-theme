@@ -1,5 +1,6 @@
 # CUSTOM THEME
 # /usr/local/share/ohmyzsh/themes/custom.zsh-theme
+# $HOME/.oh-my-zsh/themes/custom.zsh-theme
 ## based on afowler
 
 NEWLINE=$'\n%F{green}$ %{$reset_color%}'

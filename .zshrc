@@ -1,8 +1,8 @@
 ### zsh
 . "$HOME/.config/zsh/keybindings.conf"
 
-# ### oh-my-zsh
-# . "$HOME/.config/oh-my-zsh/oh-my-zsh.conf"
+### oh-my-zsh
+. "$HOME/.config/oh-my-zsh/oh-my-zsh.conf"
 
 ### fzf
 . "$HOME/.config/fzf/fzfrc"
