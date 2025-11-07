@@ -32,16 +32,15 @@ function config.init(wezterm)
     selection_fg = selection_fg,
   }
   wezterm_cfg.font = wezterm.font(font)
-  wezterm_cfg.font_size = 11
+  wezterm_cfg.font_size = 12
   wezterm_cfg.show_new_tab_button_in_tab_bar = false
   wezterm_cfg.tab_max_width = 100
   wezterm_cfg.use_fancy_tab_bar = false
-  wezterm_cfg.hide_tab_bar_if_only_one_tab = true
+  wezterm_cfg.hide_tab_bar_if_only_one_tab = false
   wezterm_cfg.window_padding = {
-    top = 0,
+    top = 2,
     bottom = 0,
   }
-
   wezterm_cfg.inactive_pane_hsb = {
     saturation = 0.5,
     brightness = 0.4,
