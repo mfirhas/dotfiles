@@ -4,6 +4,9 @@
 ### oh-my-zsh
 . "$HOME/.config/oh-my-zsh/oh-my-zsh.conf"
 
+### helix
+. "$HOME/.config/helix/helixrc"
+
 ### fzf
 . "$HOME/.config/fzf/fzfrc"
 

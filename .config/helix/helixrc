@@ -1,0 +1,2 @@
+# This is done because build from source can't find the runtime otherwise
+export HELIX_RUNTIME=/usr/local/Cellar/helix/25.07.1/libexec/runtime

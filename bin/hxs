@@ -3,7 +3,7 @@
 # This script will open helix setting the dir path of open file and tab's title
 
 # Editor to use
-EDITOR_BINARY="hxx"
+EDITOR_BINARY="$HOME/.cargo/bin/hx"
 
 filepath="$1"
 
