@@ -1,5 +1,5 @@
 ### zsh
-. "$HOME/.config/zsh/keybindings.conf"
+. "$HOME/.config/zsh/zsh.conf"
 
 ### oh-my-zsh
 . "$HOME/.config/oh-my-zsh/oh-my-zsh.conf"
