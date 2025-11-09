@@ -2,7 +2,7 @@
 
 # this script will open workspace at a directory along with:
 # top-left pane: helix
-# right pane: terminal
+# top right pane: terminal
 # bottom left pane: terminal for other purposes(e.g. ssh)
 # bottom center pane: gitui at current directory
 # bottom right pane: lazydocker at current directory
@@ -19,11 +19,11 @@ bottom_left_pane_id=$(wezterm cli split-pane)
 
 bottom_center_pane_id=$(wezterm cli split-pane --right --pane-id=$bottom_left_pane_id -- gitui)
 
-bottom_right_pane_id=$(wezterm cli split-pane --right --pane-id=$bottom_center_pane_id -- lazydocker)
+# bottom_right_pane_id=$(wezterm cli split-pane --right --pane-id=$bottom_center_pane_id -- lazydocker)
 
 wezterm cli activate-pane --pane-id $top_left_pane_id 
 
-top_right_pane_id=$(wezterm cli split-pane --right)
+# top_right_pane_id=$(wezterm cli split-pane --right)
 
 wezterm cli activate-pane --pane-id $top_left_pane_id 
 
