@@ -59,14 +59,16 @@ get_pwd() {
 }
 
 get_tab_title() {
+  # get last part of the filepath 
+  EDITOR="${EDITOR_BINARY##*/}"
   local filepath_param="$1"  # Use the parameter instead of global $filepath
   if [[ $filepath_param == *" "* ]]; then
     local last_space_separated=$(get_last_space_separated "$filepath_param")
     local base_space_separated=$(get_last_slash_separated "$last_space_separated")
-    echo "$EDITOR_BINARY - $base_space_separated"
+    echo "$EDITOR - $base_space_separated"
   else
     local base=$(get_last_slash_separated "$filepath_param")
-    echo "$EDITOR_BINARY - $base"
+    echo "$EDITOR - $base"
   fi
 }
 
