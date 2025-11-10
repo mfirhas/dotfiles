@@ -1,3 +1,5 @@
+local projects = require 'projects'
+
 local keys_config = {}
 
 local function split_pane(pane, direction, pane_size)
@@ -128,6 +130,13 @@ function keys_config.init(wezterm, wezterm_config)
       key = ';',
       mods = 'CTRL',
       action = wezterm.action.TogglePaneZoomState,
+    },
+
+    -- open project selector
+    {
+      key = 'k',
+      mods = 'CTRL',
+      action = projects.choose_project(),
     },
   }
 end
