@@ -32,7 +32,7 @@ function config.init(wezterm)
     selection_fg = selection_fg,
   }
   wezterm_cfg.font = wezterm.font(font)
-  wezterm_cfg.font_size = 12
+  wezterm_cfg.font_size = 11
   wezterm_cfg.show_new_tab_button_in_tab_bar = false
   wezterm_cfg.tab_max_width = 100
   wezterm_cfg.use_fancy_tab_bar = false
