@@ -32,7 +32,7 @@ brew bundle install
 
 ## Rust:
 - Install Rust through [rustup](https://rustup.rs/)
-- Install rust-analyzer `cargo install rust-analyzer`, it installs inside `$HOME/.cargo/bin`
+- Install rust-analyzer via rustup `rustup component add rust-analyzer`
 - For debugging: 
   - Install llvm from homebrew: `brew install llvm`
   - Create symlink lldb-dap: `ln -sf /usr/local/opt/llvm/bin/lldb-dap /usr/local/bin/lldb-dap`
