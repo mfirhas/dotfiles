@@ -134,7 +134,7 @@ function keys_config.init(wezterm, wezterm_config)
 
     -- open project selector
     {
-      key = 'l',
+      key = 'a',
       mods = 'CTRL',
       action = projects.choose_project(),
     },
