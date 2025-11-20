@@ -14,7 +14,7 @@
 # . "$HOME/.config/broot/brootrc"
 
 ### Go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/code/go/bin
 
 ### paths
 export GH=$HOME/github.com/mfirhas
