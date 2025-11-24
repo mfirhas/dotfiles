@@ -25,18 +25,13 @@ brew bundle install
 
 ## Helix:
 - local build: `cargo install --path helix-term --locked`
-- Create symlink to local build binary: `sudo ln -sf $HOME/.cargo/bin/hx /usr/local/bin/hxx`
-- Use `hxx` for local build helix
-- Use `hxs` for customised tab title
-- use `workspace` for workspace with helix, gitui, lazydocker, and terminals.
 
 ## Rust:
 - Install Rust through [rustup](https://rustup.rs/)
 - Install rust-analyzer via rustup `rustup component add rust-analyzer`
 - For debugging: 
   - Install llvm from homebrew: `brew install llvm`
-  - Create symlink lldb-dap: `ln -sf /usr/local/opt/llvm/bin/lldb-dap /usr/local/bin/lldb-dap`
-  - Create symlink for script to help debug String data: `ln -s $GH/dotfiles/lldb_vscode_rustc_primer.py  /usr/local/etc/lldb_vscode_rustc_primer.py`
+  - Create symlink lldb-dap: `ln -sf /usr/local/opt/llvm/bin/lldb-dap $GH/dotfiles/bin/lldb-dap`
 
 ## Go:
 - Install Go with homebrew `brew install go`
