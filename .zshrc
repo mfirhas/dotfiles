@@ -32,14 +32,16 @@ export PATH=/usr/local/texlive/2020basic/bin/x86_64-darwin:$PATH
 # ### export INFOPATH=/usr/local/texlive/2019/texmf-dist/doc/info
 
 ### Java
-# java 11
-export JAVA_HOME=/usr/local/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home
-# java 17
+## java 11
+# export JAVA_HOME=/usr/local/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home
+## java 17
 # export JAVA_HOME=/usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
-# java 21
-# export JAVA_HOME=/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
-# java 23
+## java 21
+export JAVA_HOME=/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+## java 23
 # export JAVA_HOME=/usr/local/opt/openjdk@23/libexec/openjdk.jdk/Contents/Home
+## java 25
+# export JAVA_HOME=/usr/local/opt/openjdk@25/libexec/openjdk.jdk/Contents/Home
 
 ### ruby 3
 # export PATH="/usr/local/opt/ruby/bin:$PATH"
