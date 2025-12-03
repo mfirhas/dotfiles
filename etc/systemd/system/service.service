@@ -1,0 +1,20 @@
+[Unit]
+Description="my service"
+After=network.target
+
+[Service]
+Type=simple
+User=mfirhas
+Group=mfirhas
+WorkingDirectory=/home/mfirhas
+EnvironmentFile=/home/mfirhas/.env
+ExecStart=/home/mfirhas/service_bin
+Restart=on-failure
+RestartSec=5s
+
+# Security hardening (optional)
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
