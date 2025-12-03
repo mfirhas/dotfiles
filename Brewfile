@@ -63,6 +63,7 @@ brew "x86_64-linux-gnu-binutils"
 brew "mdbook"
 brew "jdtls"
 brew "gnupg"
+brew "zola"
 
 # mac to linux gnu linker
 tap "sergiobenitez/osxct"
