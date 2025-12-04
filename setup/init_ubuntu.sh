@@ -1,6 +1,6 @@
 #!/bin/bash
 # WARNING: make sure to publish ssh pub key to VPS first before executing this script, otherwise you might get locked out.
-# This script will initialize initial state of ubuntu VPS.
+# This script will initialize initial state of ubuntu VPS while logging in as `root` user.
 # - Create new non-root user
 # - Copy root ssh keys to new non-root user
 # - Change ssh default port
