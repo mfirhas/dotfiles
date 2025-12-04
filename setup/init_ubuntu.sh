@@ -16,11 +16,15 @@ set -euo pipefail
 USERNAME=mfirhas
 SSHPORT=2345
 
-# create new non-root user as your main user interacting with your vps.
-adduser ${USERNAME}
+if id "${USERNAME}" &>/dev/null; then
+  echo "User ${USERNAME} already exists."
+else
+  # create new non-root user as your main user interacting with your vps.
+  adduser ${USERNAME}
 
-# add your newly created user to sudo group
-usermod -aG sudo ${USERNAME}
+  # add your newly created user to sudo group
+  usermod -aG sudo ${USERNAME}
+fi
 
 # your new user home directory path
 HOMEDIR=$(eval echo ~${USERNAME})
@@ -28,10 +32,16 @@ HOMEDIR=$(eval echo ~${USERNAME})
 # make dir for ssh keys
 mkdir -p ${HOMEDIR}/.ssh
 
-# copy ssh keys from root to user home dir
-cp /root/.ssh/authorized_keys ${HOMEDIR}/.ssh
+if [[ -f "${HOMEDIR}/.ssh/authorized_keys" ]]; then
+  echo "authorized_keys already exists in ${HOMEDIR}/.ssh"
+else
+  # copy ssh keys from root to user home dir
+  cp /root/.ssh/authorized_keys ${HOMEDIR}/.ssh
+fi
+
 chmod 0700 ${HOMEDIR}/.ssh
 chmod 0600 ${HOMEDIR}/.ssh/authorized_keys
+
 # change group and owner to newly created user for ssh dir
 chown --recursive "${USERNAME}":"${USERNAME}" "${HOMEDIR}/.ssh"
 
