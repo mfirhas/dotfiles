@@ -16,6 +16,9 @@ set -euo pipefail
 USERNAME=mfirhas
 SSHPORT=2345
 
+USERNAME="${1:-$USERNAME}"
+SSHPORT="${2:-$SSHPORT}"
+
 if id "${USERNAME}" &>/dev/null; then
   echo "User ${USERNAME} already exists."
 else
