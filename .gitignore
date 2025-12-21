@@ -1,3 +1,5 @@
 .DS_Store
 
 bin/lldb-dap
+
+**/rclone.conf
