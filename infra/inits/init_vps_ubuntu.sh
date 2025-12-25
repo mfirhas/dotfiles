@@ -11,7 +11,6 @@ echo -e "===Finished Update Packages===\n"
 
 ## Install some essentials
 echo -e "===Install Essentials==="
-echo
 apt install -y \
   ca-certificates \
   curl \
@@ -39,7 +38,9 @@ apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker
 
 sleep 1
 
-groupadd docker
+if ! getent group docker >/dev/null; then
+  groupadd docker
+fi
 
 systemctl start docker
 
