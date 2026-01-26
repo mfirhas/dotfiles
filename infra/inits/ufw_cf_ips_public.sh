@@ -13,4 +13,4 @@ for ip in $(curl -s https://www.cloudflare.com/ips-v6); do
     ufw allow from "$ip" to any port 80,443 proto tcp
 done
 
-echo "Cloudflare IPs added to ufw for port 443 (HTTPS)"
+echo "Cloudflare IPs added to ufw for port 80 & 443"
