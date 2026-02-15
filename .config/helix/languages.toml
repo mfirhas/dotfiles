@@ -21,6 +21,9 @@ request = "launch"
 completion = [ { name = "binary", completion = "filename" } ]
 args = { program = "{0}", initCommands = [ "command script import $GH/dotfiles/lldb_rust_helix_debug.py" ] }
 
+[language-server.rust-analyzer]
+config = { cargo = { features = "all" } }
+
 # GOLANG
 [[language]]
 name = "go"
