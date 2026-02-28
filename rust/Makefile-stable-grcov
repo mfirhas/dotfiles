@@ -1,0 +1,32 @@
+### Prerequisite:
+# - grcov: cargo install grcov
+
+OUT_DIR := target/coverage
+BINARY_DIR := target/debug
+PROFILE_PATTERN := $(OUT_DIR)/coverage-%p-%m.profraw
+LCOV := $(OUT_DIR)/lcov.info
+
+test:
+	@echo "Running test with coverage..."
+	@RUSTFLAGS="-C instrument-coverage" LLVM_PROFILE_FILE="$(PROFILE_PATTERN)" cargo test --all-features --lib
+
+cover:
+	@echo "Generating lcov.info..."
+	@grcov $(OUT_DIR) -s . --binary-path ./$(BINARY_DIR) -t lcov --branch --ignore-not-existing -o $(LCOV) \
+		    --ignore '/*' \
+		    --ignore 'examples/*' \
+		    --ignore 'tests/*' \
+		    --ignore 'target/*' \
+		    --ignore '**/*_test.rs'
+
+cover-html:
+	@echo "Generating coverage html..."
+	@grcov $(OUT_DIR) -s . --binary-path ./$(BINARY_DIR) -t html --branch --ignore-not-existing -o $(OUT_DIR) \
+		    --ignore '/*' \
+		    --ignore 'examples/*' \
+		    --ignore 'tests/*' \
+		    --ignore 'target/*' \
+		    --ignore '**/*_test.rs'
+
+show-coverage:
+	@open $(OUT_DIR)/html/index.html
