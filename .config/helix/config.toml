@@ -4,6 +4,7 @@ theme = "abu"
 [editor]
 line-number = "relative"
 cursorline = true
+idle-timeout = 1000
 completion-timeout = 5
 completion-trigger-len = 1
 preview-completion-insert	= false
