@@ -132,12 +132,12 @@ function keys_config.init(wezterm, wezterm_config)
       action = wezterm.action.TogglePaneZoomState,
     },
 
-    -- open project selector
-    -- {
-    --   key = 'a',
-    --   mods = 'CTRL',
-    --   action = projects.choose_project(),
-    -- },
+    -- show interactive selection of tabs
+    {
+      key = 'P',
+      mods = 'ALT|SHIFT',
+      action = wezterm.action.ShowTabNavigator
+    },
   }
 end
 
